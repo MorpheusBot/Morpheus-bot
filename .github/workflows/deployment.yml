@@ -5,15 +5,18 @@ on:
 
 jobs:
   lint-workflow-call:
-      uses: MorpheusBot/Morpheus/.github/workflows/main.yml@master
+    uses: MorpheusBot/Morpheus-bot/.github/workflows/lint.yml@master
 
   Deployment_Production:
     runs-on: ubuntu-latest
     environment: Production
     needs: lint-workflow-call
     if: github.ref == 'refs/heads/master'
+    permissions:
+      contents: read
+      packages: write
     steps:
-      - name: Execute deployment on SSH
+      - name: Deploy to Production
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.PRODUCTION_HOST }}
@@ -21,6 +24,17 @@ jobs:
           username: ${{ secrets.PRODUCTION_USERNAME }}
           port: 22
           script: |
+            echo "================== Pull Changes =================="
             cd Morpheus
             git pull
+
+            echo "================== Build and Push Image =================="
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+            docker build . --tag ghcr.io/morpheusbot/morpheus-bot:latest
+            docker push ghcr.io/morpheusbot/morpheus-bot:latest
+
+            echo "================== Restart Services =================="
             docker compose down && docker compose up --build -d
+
+            echo "================== Clean Up Images =================="
+            echo "y" | docker image prune -a

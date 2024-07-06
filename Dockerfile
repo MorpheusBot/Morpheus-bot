@@ -10,10 +10,9 @@ RUN mkdir -p /morpheus/logs
 
 # Install python dependencies
 RUN /usr/local/bin/python -m pip install --upgrade pip
-COPY requirements.txt requirements.txt
+COPY . .
 RUN pip3 install -r requirements.txt
 
-COPY . .
 RUN git config --global --add safe.directory /morpheus
 
 ENTRYPOINT [ "python3", "morpheus.py" ]

@@ -22,7 +22,7 @@ services:
                 condition: unless-stopped
                 delay: 5s
                 window: 20s
-        build: .
+        image: ghcr.io/morpheusbot/morpheus-bot:latest
         volumes:
             - .:/morpheus:Z
         depends_on:
