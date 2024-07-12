@@ -70,7 +70,7 @@ class NameDay(Base, commands.Cog):
         name_day_sk = await self._name_day_sk()
         await inter.edit_original_response(content=name_day_sk)
 
-    @tasks.loop(time=time(7, 0, tzinfo=utils.get_local_zone()))
+    @tasks.loop(time=time(6, 0, tzinfo=utils.get_local_zone()))
     async def send_names(self):
         name_day_cz = await self._name_day_cz()
         name_day_sk = await self._name_day_sk()
