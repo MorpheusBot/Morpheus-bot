@@ -9,31 +9,14 @@ on:
   workflow_call:
 
 jobs:
-  lint:
+  pre_commit_ci:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [ "3.12" ]
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup Python ${{ matrix.python-version }}
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set up Python 3.x
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
-
-    - name: Restore cache
-      uses: actions/cache@v4
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-${{ hashFiles('requirements*') }}
-
-    - name: Install dependencies
-      run: |
-        python3 -m pip install --upgrade pip wheel
-        python3 -m pip install --upgrade --upgrade-strategy eager pre-commit
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-
-    - name: Run pre-commit
-      run: |
-        pre-commit run --all-files
+        python-version: 3.x
+    - uses: pre-commit/action@v3.0.1
+      if: always()

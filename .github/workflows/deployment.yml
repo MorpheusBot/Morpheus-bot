@@ -1,16 +1,18 @@
 name: Deployment
 
 on:
+  push:
+    branches: [ master ]
   workflow_dispatch:
 
 jobs:
-  lint-workflow-call:
+  pre_commit_ci:
     uses: MorpheusBot/Morpheus-bot/.github/workflows/lint.yml@master
 
-  Deployment_Production:
+  deployment_production:
     runs-on: ubuntu-latest
     environment: Production
-    needs: lint-workflow-call
+    needs: pre_commit_ci
     if: github.ref == 'refs/heads/master'
     permissions:
       contents: read
@@ -29,12 +31,10 @@ jobs:
             git pull
 
             echo "================== Build and Push Image =================="
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
-            docker build . --tag ghcr.io/morpheusbot/morpheus-bot:latest
-            docker push ghcr.io/morpheusbot/morpheus-bot:latest
+            docker build . --tag morpheus-bot
 
             echo "================== Restart Services =================="
-            docker compose down && docker compose up --build -d
+            docker compose down && docker compose up -d
 
             echo "================== Clean Up Images =================="
             echo "y" | docker image prune -a

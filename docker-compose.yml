@@ -24,7 +24,8 @@ services:
                 condition: unless-stopped
                 delay: 5s
                 window: 20s
-        image: ghcr.io/morpheusbot/morpheus-bot:latest
+        image: morpheus-bot
+        user: ${DEFAULT_UID}:${DEFAULT_GID}
         volumes:
             - .:/morpheus:Z
         depends_on:
