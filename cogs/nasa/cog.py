@@ -39,7 +39,7 @@ class Nasa(Base, commands.Cog):
             async with self.bot.morpheus_session.get(url) as resp:
                 response = await resp.json()
             return response
-        except (asyncio.exceptions.TimeoutError, aiohttp.client_exceptions.ClientConnectorError) as error:
+        except (asyncio.exceptions.TimeoutError, aiohttp.ClientConnectorError) as error:
             raise ApiError(error=str(error))
 
     @default_cooldown()
