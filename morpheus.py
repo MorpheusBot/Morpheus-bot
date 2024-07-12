@@ -18,7 +18,7 @@ from utils.utils import get_commands_count
 class Morpheus(commands.Bot):
     def __init__(self) -> None:
         super().__init__(command_prefix="?", intents=discord.Intents.all())
-        self.bot_handler = logging.FileHandler(filename="morpheus.log", encoding="utf-8", mode="w")
+        self.bot_handler = logging.FileHandler(filename="logs/morpheus.log", encoding="utf-8", mode="w")
         self.bot_formatter = logging.Formatter("%(asctime)s: %(levelname)s: %(message)s")
 
         discord.utils.setup_logging(handler=self.bot_handler, formatter=self.bot_formatter)
