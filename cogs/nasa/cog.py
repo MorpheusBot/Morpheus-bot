@@ -52,7 +52,7 @@ class Nasa(Base, commands.Cog):
         if video:
             await inter.followup.send(video)
 
-    @tasks.loop(time=time(6, 0, tzinfo=utils.get_local_zone()))
+    @tasks.loop(time=time(7, 0, tzinfo=utils.get_local_zone()))
     async def send_nasa_image(self):
         response = await self.nasa_daily_image()
         embed, video = create_nasa_embed(response)
