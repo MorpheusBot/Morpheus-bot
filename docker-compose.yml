@@ -25,6 +25,13 @@ services:
                 delay: 5s
                 window: 20s
         image: morpheus-bot
+        build:
+            context: .
+            dockerfile: Dockerfile
+            tags:
+                - morpheus-bot
+        environment:
+            TZ: "Europe/Prague"
         user: ${DEFAULT_UID}:${DEFAULT_GID}
         volumes:
             - .:/morpheus:Z
