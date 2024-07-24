@@ -44,11 +44,12 @@ Then, create the following 5 channels (or use one channel for all of them) on yo
 12 bot_dev_channel = <Channel ID>
 ```
 
-To let docker download everything needed set proper permissions for plugins directory
-
-```bash
-chown 322:322 plugins/
-```
+> [!CAUTION]
+> There are needed some additional steps for permissions and variables.
+>
+> ```bash
+> ./init.sh
+> ```
 
 Also don't forget to import credentials for whatever sources you will be using in `config/application.yml`.
 
