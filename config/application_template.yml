@@ -47,9 +47,9 @@ plugins:
 
 lavalink:
   plugins:
-    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.1.0"
+    - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.2.0"
       snapshot: true # set to true if you want to use snapshot builds (see below)
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.1.0"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.4.0"
       snapshot: false # Set to true if you want to use a snapshot version.
 
 #  pluginsDir: "./plugins" # optional, defaults to "./plugins"
