@@ -18,7 +18,6 @@ plugins:
       - WEB
       - TVHTML5EMBEDDED
 
-
   lavasrc:
     providers: # Custom providers for track loading. This is the default
       # - "dzisrc:%ISRC%" # Deezer ISRC provider
@@ -32,11 +31,11 @@ plugins:
       deezer: false # Enable Deezer source
       yandexmusic: false # Enable Yandex Music source
       flowerytts: false # Enable Flowery TTs source
-      youtube: false # Enable YouTube search source (https://github.com/topi314/LavaSearch)
+      youtube: false  # Enable YouTube search source (https://github.com/topi314/LavaSearch)
     spotify:
       clientId: "your client id"
       clientSecret: "your client secret"
-      countryCode: "CZ" # the country code you want to use for filtering the artists top tracks. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+      countryCode: "US" # the country code you want to use for filtering the artists top tracks. See https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
       playlistLoadLimit: 6 # The number of pages at 100 tracks each
       albumLoadLimit: 6 # The number of pages at 50 tracks each
     applemusic:
@@ -58,7 +57,7 @@ plugins:
 lavalink:
   plugins:
     - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.2.0"
-      snapshot: true # set to true if you want to use snapshot builds (see below)
+      snapshot: false # set to true if you want to use snapshot builds (see below)
     - dependency: "dev.lavalink.youtube:youtube-plugin:1.5.1"
       snapshot: false # Set to true if you want to use a snapshot version.
 
@@ -103,9 +102,9 @@ lavalink:
       #strategy: "RotateOnBan" # RotateOnBan | LoadBalance | NanoSwitch | RotatingNanoSwitch
       #searchTriggersFail: true # Whether a search 429 should trigger marking the ip as failing
       #retryLimit: -1 # -1 = use default lavaplayer value | 0 = infinity | >0 = retry will happen this numbers times
-    #youtubeConfig: # Required for avoiding all age restrictions by YouTube, some restricted videos still can be played without.
-      #email: "" # Email of Google account
-      #password: "" # Password of Google account
+    youtubeConfig: # Required for avoiding all age restrictions by YouTube, some restricted videos still can be played without.
+      email: "google email" # Email of Google account
+      password: "password" # Password of Google account
     #httpConfig: # Useful for blocking bad-actors from ip-grabbing your music node and attacking it, this way only the http proxy will be attacked
       #proxyHost: "localhost" # Hostname of the proxy, (ip or domain)
       #proxyPort: 3128 # Proxy port, 3128 is the default for squidProxy
@@ -130,7 +129,7 @@ logging:
 
   level:
     root: INFO
-    lavalink: INFO
+    lavalink: DEBUG
 
   request:
     enabled: true

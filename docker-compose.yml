@@ -32,6 +32,8 @@ services:
                 - morpheus-bot
         environment:
             TZ: "Europe/Prague"
+        env_file:
+            - ./config/lavalink_secrets.env
         user: ${DEFAULT_UID}:${DEFAULT_GID}
         volumes:
             - .:/morpheus:Z
@@ -55,7 +57,7 @@ services:
             # use chown on folder to fix permissions "chown 322:322 plugins/"
             - ./plugins/:/opt/Lavalink/plugins/
         env_file:
-            - ./config/lavalink_config.env
+            - ./config/lavalink_secrets.env
         networks:
             - lavalink
         expose:
