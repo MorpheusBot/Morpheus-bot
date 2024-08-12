@@ -2,7 +2,7 @@ aiohttp~=3.10.1
 beautifulsoup4~=4.12.3
 git+https://github.com/Rapptz/discord.py
 gitpython~=3.1.43
-lxml~=5.2.2
+lxml~=5.3.0
 pandas~=2.2.2
 Pillow~=10.4.0
 requests~=2.32.3
