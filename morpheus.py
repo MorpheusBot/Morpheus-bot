@@ -11,8 +11,8 @@ from discord.ext import commands
 from config.app_config import config
 from config.messages import GlobalMessages
 from database import database_init
-from utils import embed_utils
-from utils.utils import get_commands_count
+from utils.embed import info_embed
+from utils.general import get_commands_count
 
 
 class Morpheus(commands.Bot):
@@ -63,7 +63,7 @@ class Morpheus(commands.Bot):
             user=commands.get("user", "Missing"),
         )
 
-        embed: discord.Embed = embed_utils.info_embed(self)
+        embed: discord.Embed = info_embed(self)
         embed.add_field(name="Synced commands", value=f"{len(synced)}")
 
         # set status for bot

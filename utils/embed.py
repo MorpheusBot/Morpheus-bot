@@ -8,7 +8,7 @@ import discord
 
 from config.messages import GlobalMessages
 
-from .utils import get_commands_count
+from .general import get_commands_count
 
 if TYPE_CHECKING:
     from morpheus import Morpheus

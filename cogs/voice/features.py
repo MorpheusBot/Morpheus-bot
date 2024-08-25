@@ -9,9 +9,9 @@ import wavelink
 from discord import app_commands
 
 from database.voice import PlaylistDB
-from utils.embed_utils import PaginationView
+from utils.embed import PaginationView
 from utils.interaction import custom_send
-from utils.user_utils import get_or_fetch_user
+from utils.user import get_or_fetch_user
 
 from .messages import VoiceMess
 

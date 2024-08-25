@@ -11,10 +11,10 @@ import discord
 from discord import app_commands
 from discord.ext import commands, tasks
 
-import utils.utils as utils
 from cogs.base import Base
 from custom import room_check
 from custom.cooldowns import default_cooldown
+from utils.general import get_local_zone
 
 from .features import create_nasa_embed, nasa_daily_image
 from .messages import NasaMess
@@ -35,12 +35,12 @@ class Nasa(Base, commands.Cog):
     async def nasa_image(self, inter: discord.Interaction):
         await inter.response.defer(ephemeral=self.check.botroom_check(inter))
         response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
-        embed, video = await create_nasa_embed(self.bot.user, response)
+        embed, video = await create_nasa_embed(inter.user, response)
         await inter.edit_original_response(embed=embed)
         if video:
             await inter.followup.send(video)
 
-    @tasks.loop(time=time(7, 0, tzinfo=utils.get_local_zone()))
+    @tasks.loop(time=time(7, 0, tzinfo=get_local_zone()))
     async def send_nasa_image(self):
         response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
         embed, video = await create_nasa_embed(self.bot.user, response)

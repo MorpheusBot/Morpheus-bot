@@ -8,10 +8,10 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-import utils.embed_utils as embed_utils
 from cogs.base import Base
 from custom.cooldowns import default_cooldown
 from custom.custom_errors import ApiError
+from utils.embed import add_author_footer
 
 from .messages import WeatherMess
 
@@ -77,6 +77,6 @@ class Weather(Base, commands.Cog):
         embed.add_field(name="Cloudiness", value=clouds, inline=True)
         embed.add_field(name="Visibility", value=visibility, inline=True)
 
-        embed_utils.add_author_footer(embed, inter.user)
+        add_author_footer(embed, inter.user)
 
         await inter.edit_original_response(embed=embed)

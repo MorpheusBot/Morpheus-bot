@@ -13,10 +13,10 @@ import discord
 from discord import app_commands
 from discord.ext import commands, tasks
 
-import utils.utils as utils
 from cogs.base import Base
 from custom import room_check
 from custom.cooldowns import default_cooldown
+from utils.general import get_local_zone
 
 from .messages import NameDayMess
 
@@ -70,7 +70,7 @@ class NameDay(Base, commands.Cog):
         name_day_sk = await self._name_day_sk()
         await inter.edit_original_response(content=name_day_sk)
 
-    @tasks.loop(time=time(6, 0, tzinfo=utils.get_local_zone()))
+    @tasks.loop(time=time(6, 0, tzinfo=get_local_zone()))
     async def send_names(self):
         name_day_cz = await self._name_day_cz()
         name_day_sk = await self._name_day_sk()

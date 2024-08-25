@@ -10,7 +10,7 @@ from cogs.base import Base
 from custom.cooldowns import default_cooldown
 from custom.enums import DiscordTimestamps
 from database.guild import GuildDB
-from utils.embed_utils import add_author_footer
+from utils.embed import add_author_footer
 
 from . import features as info_features
 from .messages import InfoMess

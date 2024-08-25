@@ -10,7 +10,7 @@ from discord.ext import commands
 
 from cogs.base import Base
 from custom.cooldowns import custom_cooldown, default_cooldown
-from utils.user_utils import get_or_fetch_user
+from utils.user import get_or_fetch_user
 
 from .messages import MemesMess
 

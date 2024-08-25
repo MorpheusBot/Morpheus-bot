@@ -6,7 +6,7 @@ import aiohttp
 import discord
 
 from custom.custom_errors import ApiError
-from utils.embed_utils import add_author_footer
+from utils.embed import add_author_footer
 
 from .messages import NasaMess
 

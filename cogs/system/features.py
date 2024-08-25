@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 import discord
 
 from config.app_config import config
-from utils import utils
+from utils.general import split
 
 from .messages import SystemMess
 
@@ -82,8 +82,8 @@ def create_embed(bot: Morpheus) -> discord.Embed:
 
     chunks_count = 2 if cog_count <= 20 else 3
 
-    loaded_chunks = utils.split(cog_loaded, chunks_count)
-    unloaded_chunks = utils.split(cog_unloaded, chunks_count)
+    loaded_chunks = split(cog_loaded, chunks_count)
+    unloaded_chunks = split(cog_unloaded, chunks_count)
 
     for loaded_chunk in loaded_chunks:
         embed.add_field(name="\u200b", value="".join(loaded_chunk), inline=True)

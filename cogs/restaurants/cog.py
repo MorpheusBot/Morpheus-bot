@@ -8,9 +8,9 @@ import unidecode
 from discord import app_commands
 from discord.ext import commands
 
-import utils.utils as utils
 from cogs.base import Base
 from custom.cooldowns import custom_cooldown, default_cooldown
+from utils.general import cut_string_by_words
 
 from .features import RestaurantsScraper
 from .messages import RestaurantsMess
@@ -77,7 +77,7 @@ class Restaurants(Base, commands.Cog):
 
                 # make list to string again and cut it for sending
                 aligned_menu = "\n".join(aligned_menu)
-                output = utils.cut_string_by_words(aligned_menu, 1950, " ")
+                output = cut_string_by_words(aligned_menu, 1950, " ")
                 for menu in output:
                     await inter.channel.send(f"```md\n{menu}```")
         else:

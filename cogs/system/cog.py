@@ -9,7 +9,7 @@ from discord.ext import commands
 from cogs.base import Base
 from custom.cooldowns import default_cooldown
 from custom.permission_check import is_bot_admin
-from utils import embed_utils
+from utils.embed import info_embed
 
 from . import features
 from .buttons import SystemView
@@ -55,7 +55,7 @@ class System(Base, commands.Cog):
     @app_commands.command(name="morpheus", description=SystemMess.morpheus_brief)
     async def morpheus(self, inter: discord.Interaction):
         await inter.response.defer()
-        embed = embed_utils.info_embed(self.bot)
+        embed = info_embed(self.bot)
         await inter.edit_original_response(embed=embed)
 
     @cogs.error

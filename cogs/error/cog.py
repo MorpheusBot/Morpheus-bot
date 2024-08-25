@@ -12,7 +12,7 @@ from discord.ext import commands
 from cogs.base import Base
 from custom import custom_errors
 from custom.enums import DiscordTimestamps
-from utils import utils
+from utils.general import cut_string
 from utils.interaction import custom_send
 
 from .messages import ErrorMess
@@ -88,7 +88,7 @@ class Error(Base, commands.Cog):
 
         await channel.send(embed=embed)
 
-        output = utils.cut_string(output, 1900)
+        output = cut_string(output, 1900)
         for message in output:
             await channel.send(f"```\n{message}\n```")
 
@@ -144,7 +144,7 @@ class Error(Base, commands.Cog):
 
         await channel.send(embed=embed)
 
-        output = utils.cut_string(output, 1900)
+        output = cut_string(output, 1900)
         for message in output:
             await channel.send(f"```\n{message}\n```")
 
@@ -195,7 +195,7 @@ class Error(Base, commands.Cog):
             if arg.guild_id != Base.config.guild_id:
                 embed.add_field(name="Guild", value=event_guild)
 
-        output = utils.cut_string(output, 1900)
+        output = cut_string(output, 1900)
         for embed in embeds:
             await channel.send(embed=embed)
         for message in output:

@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 import discord
 
 from custom.constants import MAX_FILE_SIZE
-from utils.utils import split_to_parts
+from utils.general import split_to_parts
 
 from .messages import BookmarkMess
 
