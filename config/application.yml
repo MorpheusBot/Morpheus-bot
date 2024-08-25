@@ -7,6 +7,9 @@ server: # REST and WS server
 plugins:
   youtube:
     enabled: true # Whether this source can be used.
+    oauth:
+      enabled: true
+      refreshToken: "paste your refresh token here"
     allowSearch: true # Whether "ytsearch:" and "ytmsearch:" can be used.
     allowDirectVideoIds: true # Whether just video IDs can match. If false, only complete URLs will be loaded.
     allowDirectPlaylistIds: true # Whether just playlist IDs can match. If false, only complete URLs will be loaded.
@@ -129,7 +132,8 @@ logging:
 
   level:
     root: INFO
-    lavalink: DEBUG
+    lavalink: INFO
+    dev.lavalink.youtube.http.YoutubeOauth2Handler: INFO
 
   request:
     enabled: true
