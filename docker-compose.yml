@@ -34,7 +34,6 @@ services:
             TZ: "Europe/Prague"
         env_file:
             - ./config/lavalink_secrets.env
-        user: ${DEFAULT_UID}:${DEFAULT_GID}
         volumes:
             - .:/morpheus:Z
         depends_on:

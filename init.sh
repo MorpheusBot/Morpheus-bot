@@ -3,10 +3,6 @@
 DEFAULT_UID=$(id -u)
 DEFAULT_GID=$(id -g)
 
-# Create env file
-echo "Creating .env file"
-printf "DEFAULT_UID=$DEFAULT_UID\nDEFAULT_GID=$DEFAULT_GID\n" > .env
-
 # Create logs folder with permissions
 echo "Updating logs folder permissions"
 mkdir -p logs
