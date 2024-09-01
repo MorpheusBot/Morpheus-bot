@@ -10,7 +10,7 @@ from discord.ext import commands
 
 from config.app_config import config
 from config.messages import GlobalMessages
-from database import database_init
+from database.init_db import init_db
 from utils.embed import info_embed
 from utils.general import get_commands_count
 
@@ -25,7 +25,7 @@ class Morpheus(commands.Bot):
 
     async def setup_hook(self) -> None:
         # initialize database
-        await database_init.init_db()
+        await init_db()
         logging.info("Database initialized")
 
         # connect to lavalink

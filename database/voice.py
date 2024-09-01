@@ -3,10 +3,10 @@ from __future__ import annotations
 from sqlalchemy import String, UniqueConstraint, select
 from sqlalchemy.orm import Mapped, mapped_column
 
-from database import database
+from database.database import Base, database
 
 
-class PlaylistDB(database.base):
+class PlaylistDB(Base):
     __tablename__ = "playlist"
 
     __table_args__ = (UniqueConstraint("name", "author_id", "guild_id"),)

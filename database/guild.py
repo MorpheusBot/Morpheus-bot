@@ -6,10 +6,10 @@ from sqlalchemy import ForeignKey, UniqueConstraint, select
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from database import database
+from database.database import Base, database
 
 
-class GuildDB(database.base):
+class GuildDB(Base):
     __tablename__ = "guild"
 
     id: Mapped[str] = mapped_column(primary_key=True)
@@ -58,7 +58,7 @@ class GuildDB(database.base):
                 return info_channel
 
 
-class GuildPhraseDB(database.base):
+class GuildPhraseDB(Base):
     __tablename__ = "guild_phrase"
 
     # unique key per guild
