@@ -66,12 +66,6 @@ def add_author_footer(
     embed.set_footer(icon_url=display_avatar, text=" | ".join((str(display_name), *additional_text)))
 
 
-class ViewRowFull(Exception):
-    """Adding a Item to already filled row"""
-
-    pass
-
-
 class PaginationButton(discord.ui.Button):
     """Subclass of discord.ui.Button with custom callback.
 
@@ -91,7 +85,7 @@ class PaginationView(discord.ui.View):
         embeds: list[discord.Embed],
         row: int = 0,
         perma_lock: bool = False,
-        roll_arroud: bool = True,
+        roll_around: bool = True,
         end_arrow: bool = True,
         timeout: int = 300,
         page: int = 1,
@@ -99,48 +93,65 @@ class PaginationView(discord.ui.View):
     ):
         """Embed pagination view
 
-        param: discord.User author: command author, used for locking pagination
-        param: List[discord.Embed] embeds: List of embed to be paginated
+        param discord.User author: command author, used for locking pagination
+        param List[discord.Embed] embeds: List of embed to be paginated
         param int row: On which row should be buttons added, defaults to first
         param bool perma_lock: If true allow just message author to change pages, without dynamic lock button
-        param bool roll_arroud: After last page rollaround to first
+        param bool roll_around: After last page rollaround to first
         param bool end_arrow: If true use also '⏩' button
         param int timeout: Seconds until disabling interaction, use None for always enabled
         param int page: Starting page
         param bool show_page: Show page number at the bottom of embed, e.g.: 2/4
         """
-        self.page = page
-        self.author = author
-        self.locked = False
-        self.roll_arroud = roll_arroud
-        self.perma_lock = perma_lock
-        self.max_page = len(embeds)
-        self.embeds = embeds
-        self.message: discord.Message
         super().__init__(timeout=timeout)
+        self.author = author
+        self.embeds = embeds
+        self.perma_lock = perma_lock
+        self.roll_around = roll_around
+        self.page = page
+        self.max_page = len(embeds)
+        self.locked = False
+        self.dynam_lock = False
+        self.message: discord.Message
+
         if self.max_page <= 1:
-            return
+            return  # No need for pagination
+
         if show_page:
             self.add_page_numbers()
 
-        self.add_item(
-            PaginationButton(emoji="⏪", custom_id="embed:start_page", row=row, style=discord.ButtonStyle.primary)
+        # Add all buttons to the view and set their callbacks
+        self.start_button = discord.ui.Button(
+            emoji="⏪", custom_id="embed:start", row=row, style=discord.ButtonStyle.primary
         )
-        self.add_item(
-            PaginationButton(emoji="◀", custom_id="embed:prev_page", row=row, style=discord.ButtonStyle.primary)
+        self.start_button.callback = self.start_callback
+        self.add_item(self.start_button)
+
+        self.prev_button = discord.ui.Button(
+            emoji="◀", custom_id="embed:prev", row=row, style=discord.ButtonStyle.primary
         )
-        self.add_item(
-            PaginationButton(emoji="▶", custom_id="embed:next_page", row=row, style=discord.ButtonStyle.primary)
+        self.prev_button.callback = self.prev_callback
+        self.add_item(self.prev_button)
+
+        self.next_button = discord.ui.Button(
+            emoji="▶", custom_id="embed:next", row=row, style=discord.ButtonStyle.primary
         )
+        self.next_button.callback = self.next_callback
+        self.add_item(self.next_button)
+
         if end_arrow:
-            self.add_item(
-                PaginationButton(emoji="⏩", custom_id="embed:end_page", row=row, style=discord.ButtonStyle.primary)
+            self.end_button = discord.ui.Button(
+                emoji="⏩", custom_id="embed:end", row=row, style=discord.ButtonStyle.primary
             )
-        if not perma_lock:
-            # if permanent lock is applied, dynamic lock is removed from buttons
-            self.lock_button = PaginationButton(
-                emoji="🔓", custom_id="embed:lock", row=0, style=discord.ButtonStyle.success
+            self.end_button.callback = self.end_callback
+            self.add_item(self.end_button)
+
+        if not self.perma_lock:
+            # if permanent lock is not applied, dynamic lock is added
+            self.lock_button = discord.ui.Button(
+                emoji="🔓", custom_id="embed:lock", row=row, style=discord.ButtonStyle.success
             )
+            self.lock_button.callback = self.lock_callback
             self.add_item(self.lock_button)
 
     @property
@@ -150,19 +161,6 @@ class PaginationView(discord.ui.View):
     @embed.setter
     def embed(self, value):
         self.embeds[self.page - 1] = value
-
-    def add_item(self, item: discord.ui.Item) -> None:
-        row_cnt = 0
-        for child in self.children:
-            if item.emoji == child.emoji:
-                child.disabled = False
-                return
-            if item.row == child.row:
-                row_cnt += 1
-        if row_cnt >= 5:
-            # we are trying to add new button to already filled row
-            raise ViewRowFull
-        super().add_item(item)
 
     def add_page_numbers(self):
         """Set footers with page numbers for each embed in list"""
@@ -187,28 +185,37 @@ class PaginationView(discord.ui.View):
         else:
             return 0
 
+    async def lock_callback(self, interaction: discord.Interaction):
+        self.dynam_lock = not self.dynam_lock
+        if self.dynam_lock:
+            self.lock_button.style = discord.ButtonStyle.danger
+            self.lock_button.emoji = "🔒"
+        else:
+            self.lock_button.style = discord.ButtonStyle.success
+            self.lock_button.emoji = "🔓"
+        await interaction.response.edit_message(view=self)
+
+    async def start_callback(self, interaction: discord.Interaction):
+        await self.pagination_callback(interaction, "start")
+
+    async def prev_callback(self, interaction: discord.Interaction):
+        await self.pagination_callback(interaction, "prev")
+
+    async def next_callback(self, interaction: discord.Interaction):
+        await self.pagination_callback(interaction, "next")
+
+    async def end_callback(self, interaction: discord.Interaction):
+        await self.pagination_callback(interaction, "end")
+
+    async def pagination_callback(self, interaction: discord.Interaction, id: str):
+        self.page = self.pagination_next(id, self.page, self.max_page, self.roll_around)
+        await interaction.response.edit_message(embed=self.embed, view=self)
+
     async def interaction_check(self, inter: discord.Interaction) -> bool | None:
-        if inter.data["custom_id"] == "embed:lock":
-            if inter.user.id == self.author.id:
-                self.locked = not self.locked
-                if self.locked:
-                    self.lock_button.style = discord.ButtonStyle.danger
-                    self.lock_button.emoji = "🔒"
-                else:
-                    self.lock_button.style = discord.ButtonStyle.success
-                    self.lock_button.emoji = "🔓"
-                await inter.response.edit_message(view=self)
-            else:
-                await inter.response.send(GlobalMessages.embed_not_author, ephemeral=True)
+        if (self.perma_lock or self.dynam_lock) and inter.user.id != self.author.id:
+            """Message has permanent lock or dynamic lock enabled"""
+            await inter.response.send_message(GlobalMessages.embed_not_author, ephemeral=True)
             return False
-        ids = ["embed:start_page", "embed:prev_page", "embed:next_page", "embed:end_page"]
-        if inter.data["custom_id"] not in ids or self.max_page <= 1:
-            return False
-        if (self.perma_lock or self.locked) and inter.user.id != self.author.id:
-            await inter.response.send(GlobalMessages.embed_not_author, ephemeral=True)
-            return False
-        self.page = self.pagination_next(inter.data["custom_id"], self.page, self.max_page, self.roll_arroud)
-        await inter.response.edit_message(embed=self.embed)
         return True
 
     async def on_timeout(self):
