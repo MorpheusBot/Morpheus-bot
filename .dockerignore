@@ -3,3 +3,7 @@ README.md
 **/__pycache__/
 **/docker-compose*
 **/Dockerfile*
+**/venv/
+**/env/
+**/.ruff_cache/
+**/devcontainer/
