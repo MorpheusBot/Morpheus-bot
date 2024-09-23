@@ -11,4 +11,4 @@ sqlalchemy[asyncio]~=2.0.35
 wavelink~=3.4.1
 cryptography~=43.0.1
 asyncpg~=0.29.0
-alembic~=1.13.2
+alembic~=1.13.3
