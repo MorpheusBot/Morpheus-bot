@@ -19,7 +19,7 @@ jobs:
       packages: write
     steps:
       - name: Deploy to Production
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.1.0
         with:
           host: ${{ secrets.PRODUCTION_HOST }}
           key: ${{ secrets.PRODUCTION_SSH_KEY }}
