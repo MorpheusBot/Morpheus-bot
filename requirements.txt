@@ -1,4 +1,4 @@
-aiohttp~=3.10.8
+aiohttp~=3.10.9
 beautifulsoup4~=4.12.3
 git+https://github.com/Rapptz/discord.py
 gitpython~=3.1.43
