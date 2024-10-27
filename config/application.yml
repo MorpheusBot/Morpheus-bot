@@ -17,9 +17,9 @@ plugins:
     # Clients are queried in the order they are given (so the first client is queried first and so on...)
     clients:
       - MUSIC
-      - ANDROID_TESTSUITE
+      - ANDROID_VR
       - WEB
-      - TVHTML5EMBEDDED
+      - WEBEMBEDDED
 
   lavasrc:
     providers: # Custom providers for track loading. This is the default
