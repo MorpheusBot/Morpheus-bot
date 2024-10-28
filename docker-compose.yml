@@ -1,11 +1,7 @@
 services:
-    db:
-        deploy:
-            restart_policy:
-                condition: unless-stopped
-                delay: 5s
-                window: 20s
+    postgres:
         image: postgres:16-alpine
+        container_name: morpheus-postgres
         environment:
             POSTGRES_USER: morpheus
             POSTGRES_DB: morpheus
@@ -13,18 +9,29 @@ services:
         command: ["postgres", "-c", "logging_collector=on", "-c", "log_directory=/var/log/", "-c", "log_filename=postgresql.log", "-c", "log_file_mode=0644", "-c", "log_rotation_size=200MB"]
         volumes:
             - ./logs:/var/log:Z
-            - postgres_data:/var/lib/postgresql/data/
+            - morpheus_data:/var/lib/postgresql/data/
             - ./database/backup/backup.sql:/docker-entrypoint-initdb.d/backup.sql
         networks:
-            - db
-
-    bot:
+            - morpheus
         deploy:
             restart_policy:
                 condition: unless-stopped
                 delay: 5s
                 window: 20s
+        healthcheck:
+            test: ["CMD", "pg_isready"]
+            interval: 30s
+            timeout: 5s
+            retries: 3
+
+    bot:
         image: morpheus-bot
+        container_name: morpheus-bot
+        deploy:
+            restart_policy:
+                condition: unless-stopped
+                delay: 5s
+                window: 20s
         build:
             context: .
             dockerfile: Dockerfile
@@ -37,20 +44,17 @@ services:
         volumes:
             - .:/morpheus:Z
         depends_on:
-            - db
-            - lavalink
+            postgres:
+                condition: service_healthy
+            lavalink:
+                condition: service_started
         networks:
             - lavalink
-            - db
+            - morpheus
 
     lavalink:
         image: ghcr.io/lavalink-devs/lavalink:4
         container_name: lavalink
-        deploy:
-            restart_policy:
-                condition: unless-stopped
-                delay: 5s
-                window: 20s
         volumes:
             - ./config/application.yml:/opt/Lavalink/application.yml
             # use chown on folder to fix permissions "chown 322:322 plugins/"
@@ -61,12 +65,17 @@ services:
             - lavalink
         expose:
             - "2333"
+        deploy:
+            restart_policy:
+                condition: unless-stopped
+                delay: 5s
+                window: 20s
 
 networks:
+    morpheus:
+        name: morpheus
     lavalink:
         name: lavalink
-    db:
-        name: db
 
 volumes:
-    postgres_data:
+    morpheus_data:

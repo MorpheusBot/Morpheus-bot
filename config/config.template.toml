@@ -5,7 +5,7 @@ admin_ids = [0]  # first ID is used for mention in case of false verification
 guild_id = 0
 
 [database]
-db_string = "postgresql+asyncpg://morpheus:postgres@db:5432/morpheus"
+db_string = "postgresql+asyncpg://morpheus:postgres@morpheus-postgres:5432/morpheus"
 
 [channels]
 bot_channel = 862395759960522773
