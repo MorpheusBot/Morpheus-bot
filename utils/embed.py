@@ -165,7 +165,7 @@ class PaginationView(discord.ui.View):
     def add_page_numbers(self):
         """Set footers with page numbers for each embed in list"""
         for page, embed in enumerate(self.embeds):
-            add_author_footer(embed, self.author, additional_text=[f"Page {page+1}/{self.max_page}"])
+            add_author_footer(embed, self.author, additional_text=[f"Page {page + 1}/{self.max_page}"])
 
     def pagination_next(self, id: str, page: int, max_page: int, roll_around: bool = True) -> int:
         if "next" in id:
