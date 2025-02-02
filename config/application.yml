@@ -20,6 +20,7 @@ plugins:
       - ANDROID_VR
       - WEB
       - WEBEMBEDDED
+      - TVHTML5EMBEDDED
 
   lavasrc:
     providers: # Custom providers for track loading. This is the default
@@ -133,7 +134,7 @@ logging:
   level:
     root: INFO
     lavalink: INFO
-    dev.lavalink.youtube.http.YoutubeOauth2Handler: INFO
+    dev.lavalink.youtube.http.YoutubeOauth2Handler: DEBUG
 
   request:
     enabled: true
