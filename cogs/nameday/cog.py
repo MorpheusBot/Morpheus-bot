@@ -29,7 +29,6 @@ class NameDay(Base, commands.Cog):
         super().__init__()
         self.bot = bot
         self.tasks = [self.send_names.start()]
-        self._owner_id = bot.owner_id
         self.check = room_check.RoomCheck(bot)
 
     async def _name_day_cz(self):
