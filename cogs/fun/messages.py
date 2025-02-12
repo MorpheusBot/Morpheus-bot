@@ -8,3 +8,4 @@ class FunMess(GlobalMessages):
     duck_brief = "Send a random duck picture"
     dadjoke_brief = "Send a random dad joke or find by keyword"
     yo_mamajoke_brief = "Send a random yo mama joke"
+    xkcd_brief = "Get the latest XKCD comic"

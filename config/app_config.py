@@ -49,6 +49,7 @@ class Config:
     threads_with_reaction: list[int] = get_attr(toml_dict, "channels", "threads_with_reaction")
     name_day_channels: int = get_attr(toml_dict, "channels", "name_day_channels")
     nasa_channels: list[int] = get_attr(toml_dict, "channels", "nasa_channels")
+    xkcd_channels: list[int] = get_attr(toml_dict, "channels", "xkcd_channels")
     gay_channel: int = get_attr(toml_dict, "channels", "gay_channel")
     webhook: int = get_attr(toml_dict, "channels", "webhook")
 

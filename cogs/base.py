@@ -42,6 +42,10 @@ class Base:
     def nasa_channels(self) -> list[discord.TextChannel]:
         return [self.bot.get_channel(channel) for channel in self.config.nasa_channels]
 
+    @cached_property
+    def xkcd_channels(self) -> list[discord.TextChannel]:
+        return [self.bot.get_channel(channel) for channel in self.config.xkcd_channels]
+
     def cog_unload(self) -> None:
         for task in self.tasks:
             task.cancel()

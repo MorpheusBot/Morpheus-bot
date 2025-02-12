@@ -14,6 +14,7 @@ thread_channels = [880104339107110983, 955860803410624602]  # channel that creat
 threads_with_reaction = [880104339107110983]                # channel that creates threads with reactions
 name_day_channels = [983066687354077254]
 nasa_channels = [0]
+xkcd_channels = [0]
 gay_channel = 920015190085472256
 webhook = 0
 
