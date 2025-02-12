@@ -34,16 +34,15 @@ class Morpheus(commands.Bot):
         nodes = [wavelink.Node(uri=f"ws://lavalink:{port}", password=password)]
         await wavelink.Pool.connect(nodes=nodes, client=self, cache_capacity=None)
 
+        # get bot data
+        await self.application_info()
+
         # create aiohttp session
         headers = {"User-Agent": f"https://github.com/solumath/Morpheus?bot_owner={self.owner_id}"}
         self.morpheus_session = aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=10), headers=headers)
 
         # load cogs
         await self.init_cogs()
-
-        # get bot data
-        app_info = await self.application_info()
-        self.owner_id = app_info.owner.id
 
     async def on_ready(self) -> None:
         synced = await self.tree.sync()
