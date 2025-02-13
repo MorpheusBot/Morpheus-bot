@@ -32,11 +32,11 @@ class Fun(Base, commands.Cog):
         super().__init__()
         self.bot = bot
         self.tasks = [self.xkcd_daily.start()]
+        self.xkcd_url: str = "https://xkcd.com"
         self.total_xkcd_posts: int = 0
-        self.xkcd_url: str = "https://xkcd.com/info.0.json"
 
     async def update_xkcd_posts(self):
-        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, "https://xkcd.com/info.0.json")
+        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, f"{self.xkcd_url}/info.0.json")
         self.total_xkcd_posts = xkcd_post["num"]
 
     @default_cooldown()
@@ -197,20 +197,27 @@ class Fun(Base, commands.Cog):
 
     @default_cooldown()
     @app_commands.command(name="xkcd", description=FunMess.xkcd_brief)
-    async def xkcd(self, inter: discord.Interaction, number: int = None, latest: bool = False):
+    async def xkcd(self, inter: discord.Interaction, number: app_commands.Range[int, 1] = None, latest: bool = False):
+        """Get random XKCD comic.
+        If `latest` is specified, get the latest comic.
+        If `number` is specified, get the comic with that number.
+        If `number` and `latest` is specified, get comic with specified number.
+        """
+        await inter.response.defer()
         if not self.total_xkcd_posts:
             await self.update_xkcd_posts()
+
         if number:
-            url = f"https://xkcd.com/{number}/info.0.json"
+            url = f"{self.xkcd_url}/{number}"
         elif latest:
-            url = self.xkcd_url
+            url = f"{self.xkcd_url}"
         else:
             number = random.randint(1, self.total_xkcd_posts)
-            url = f"https://xkcd.com/{number}/info.0.json"
+            url = f"{self.xkcd_url}/{number}"
 
-        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, url)
-        embed = await features.create_xkcd_embed(xkcd_post, self.bot.user)
-        await inter.response.send_message(embed=embed)
+        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, f"{url}/info.0.json")
+        embed = await features.create_xkcd_embed(xkcd_post, inter.user, url)
+        await inter.followup.send(embed=embed)
 
     @tasks.loop(time=time(12, 0, tzinfo=get_local_zone()))
     async def xkcd_daily(self):

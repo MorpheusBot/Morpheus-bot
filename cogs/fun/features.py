@@ -20,8 +20,8 @@ async def get_image(morpheus_session: aiohttp.ClientSession, url: str) -> tuple[
             if response.status != 200:
                 raise ApiError(response.status)
             image = await response.json()
-    except (asyncio.exceptions.TimeoutError, aiohttp.client_exceptions.ClientConnectorError) as error:
-        raise ApiError(error=str(error))
+    except (aiohttp.ClientConnectorError, asyncio.TimeoutError) as error:
+        raise ApiError(str(error))
 
     # get image url
     if isinstance(image, list):
@@ -35,11 +35,11 @@ async def get_image(morpheus_session: aiohttp.ClientSession, url: str) -> tuple[
     try:
         async with morpheus_session.get(url) as response:
             if response.status != 200:
-                raise ApiError(error=f"{response.status} - {response.text()}")
+                raise ApiError(f"{response.status} - {response.text()}")
             file_name = url.split("/")[-1]
             return BytesIO(await response.read()), file_name
-    except (asyncio.exceptions.TimeoutError, aiohttp.client_exceptions.ClientConnectorError) as error:
-        raise ApiError(error=str(error))
+    except (aiohttp.ClientConnectorError, asyncio.TimeoutError) as error:
+        raise ApiError(str(error))
 
 
 async def get_fact(morpheus_session: aiohttp.ClientSession, url: str, key: str) -> str:
@@ -54,14 +54,15 @@ async def get_fact(morpheus_session: aiohttp.ClientSession, url: str, key: str) 
 async def get_xkcd(morpheus_session: aiohttp.ClientSession, url: str) -> dict:
     try:
         async with morpheus_session.get(url) as resp:
+            if resp.status != 200:
+                raise ApiError(resp.status)
             res = await resp.json()
         return res
-    except (asyncio.exceptions.TimeoutError, aiohttp.client_exceptions.ClientConnectorError):
-        return "Website unreachable"
+    except (aiohttp.ClientConnectorError, asyncio.TimeoutError) as error:
+        raise ApiError(str(error))
 
 
-async def create_xkcd_embed(xkcd_post: dict, user: discord.User) -> discord.Embed:
-    xkcd_url = "https://xkcd.com"
+async def create_xkcd_embed(xkcd_post: dict, user: discord.User, xkcd_url: str) -> discord.Embed:
     embed = discord.Embed(
         title=xkcd_post["title"],
         description=xkcd_post["alt"],
