@@ -223,7 +223,7 @@ class Fun(Base, commands.Cog):
     async def xkcd_daily(self):
         await self.update_xkcd_posts()
         number = random.randint(1, self.total_xkcd_posts)
-        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, f"{self.xkcd_url}/{number}")
-        embed = await features.create_xkcd_embed(xkcd_post, self.bot.user)
+        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, f"{self.xkcd_url}/{number}/info.0.json")
+        embed = await features.create_xkcd_embed(xkcd_post, self.bot.user, f"{self.xkcd_url}/{number}")
         for channel in self.xkcd_channels:
             await channel.send(embed=embed)
