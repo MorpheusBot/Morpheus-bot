@@ -222,7 +222,8 @@ class Fun(Base, commands.Cog):
     @tasks.loop(time=time(12, 0, tzinfo=get_local_zone()))
     async def xkcd_daily(self):
         await self.update_xkcd_posts()
-        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, self.xkcd_url)
+        number = random.randint(1, self.total_xkcd_posts)
+        xkcd_post = await features.get_xkcd(self.bot.morpheus_session, f"{self.xkcd_url}/{number}")
         embed = await features.create_xkcd_embed(xkcd_post, self.bot.user)
         for channel in self.xkcd_channels:
             await channel.send(embed=embed)
