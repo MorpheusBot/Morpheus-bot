@@ -9,6 +9,6 @@ toml~=0.10.2
 Unidecode~=1.3.8
 sqlalchemy[asyncio]~=2.0.38
 wavelink~=3.4.1
-cryptography~=44.0.1
+cryptography~=44.0.2
 asyncpg~=0.30.0
 alembic~=1.14.1
