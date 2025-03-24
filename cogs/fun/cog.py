@@ -43,12 +43,12 @@ class Fun(Base, commands.Cog):
     @app_commands.command(name="cat", description=FunMess.cat_brief)
     async def cat(self, inter: discord.InteractionMessage):
         """Get random image of a cat"""
-        image_bytes, file_name = await features.get_image("https://api.thecatapi.com/v1/images/search")
+        image_bytes, file_name = await features.get_image(self.bot.morpheus_session, "https://api.thecatapi.com/v1/images/search")
         image_file = discord.File(image_bytes, filename=file_name)
 
         fact_response: str = ""
         if random.randint(0, 9) == 1:
-            fact_response = await self.get_fact("https://meowfacts.herokuapp.com/", "data")
+            fact_response = await features.get_fact(self.bot.morpheus_session, "https://meowfacts.herokuapp.com/", "data")
 
         embed = discord.Embed(color=discord.Color.blue())
         embed.set_footer(text=features.custom_footer(inter.user, "thecatapi.com"))
@@ -70,12 +70,12 @@ class Fun(Base, commands.Cog):
     @app_commands.command(name="dog", description=FunMess.dog_brief)
     async def dog(self, inter: discord.Interaction):
         """Get random image of a dog"""
-        image_bytes, file_name = await features.get_image("https://api.thedogapi.com/v1/images/search")
+        image_bytes, file_name = await features.get_image(self.bot.morpheus_session, "https://api.thedogapi.com/v1/images/search")
         image_file = discord.File(image_bytes, filename=file_name)
 
         fact_response: str = ""
         if random.randint(0, 9) == 1:
-            fact_response = await features.get_fact("https://dogapi.dog/api/facts/", "facts")
+            fact_response = await features.get_fact(self.bot.morpheus_session, "https://dogapi.dog/api/facts/", "facts")
 
         embed = discord.Embed(color=discord.Color.blue())
         embed.set_footer(text=features.custom_footer(inter.user, "thedogapi.com"))
@@ -97,7 +97,7 @@ class Fun(Base, commands.Cog):
     @app_commands.command(name="fox", description=FunMess.fox_brief)
     async def fox(self, inter: discord.Interaction):
         """Get random image of a fox"""
-        image_bytes, file_name = await features.get_image("https://randomfox.ca/floof/")
+        image_bytes, file_name = await features.get_image(self.bot.morpheus_session, "https://randomfox.ca/floof/")
         image_file = discord.File(image_bytes, filename=file_name)
 
         embed = discord.Embed(color=discord.Color.blue())
