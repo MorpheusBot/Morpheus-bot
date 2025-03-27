@@ -136,7 +136,7 @@ class Fun(Base, commands.Cog):
         keyword: search for a certain keyword in a joke
         """
         if keyword is not None and ("&" in keyword or "?" in keyword):
-            await inter.send("I didn't find a joke like that.")
+            await inter.response.send_message("I didn't find a joke like that.")
             return
 
         params: dict[str, str] = {"limit": "30"}

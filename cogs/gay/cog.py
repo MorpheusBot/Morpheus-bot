@@ -53,6 +53,7 @@ class Gay(Base, commands.Cog):
         super().__init__()
         self.bot = bot
 
+    @app_commands.guilds(Base.config.guild_id)
     @app_commands.command(name="leadgay", description=GayMess.leadgay_brief)
     async def gays(self, inter: discord.Interaction, count: app_commands.Range[int, 1] = 10):
         global mention_author_count, mention_count

@@ -13,6 +13,7 @@ from typing import TYPE_CHECKING
 import discord
 from discord import app_commands
 from discord.ext import commands, tasks
+from discord.ext.commands import has_permissions
 
 from cogs.base import Base
 from custom import room_check
@@ -68,19 +69,41 @@ class Emoji(Base, commands.Cog):
             await self.download_emojis(inter.guild)
         await inter.edit_original_response(file=discord.File("emojis.zip"))
 
-    @emoji.command(name="get_emoji", description=EmojiMess.get_emoji_brief)
+    @emoji.command(name="get", description=EmojiMess.get_emoji_brief)
     async def get_emoji(self, inter: discord.Interaction, emoji: str):
         """Get emoji in full size"""
-        await inter.response.defer()
-        emoji = discord.PartialEmoji.from_str(emoji)
-        await inter.edit_original_response(emoji.url)
+        try:
+            emoji = await commands.PartialEmojiConverter().convert(self, emoji)
+        except commands.PartialEmojiConversionFailure:
+            await inter.response.send_message(content=EmojiMess.invalid_emoji, ephemeral=True)
+            return
+
+        await inter.response.send_message(content=emoji.url)
+
+    @has_permissions(administrator=True)
+    @app_commands.allowed_contexts(guilds=True)
+    @app_commands.command(name="add_server_emoji", description=EmojiMess.add_server_emoji_brief)
+    async def add_emoji(self, inter: discord.Interaction, emoji: str, emoji_name: str = None):
+        """Add emoji to server"""
+        try:
+            emoji = await commands.PartialEmojiConverter().convert(self, emoji)
+        except commands.PartialEmojiConversionFailure:
+            await inter.response.send_message(content=EmojiMess.invalid_emoji, ephemeral=True)
+            return
+
+        async with self.bot.morpheus_session.get(emoji.url) as resp:
+            if resp.status == 200:
+                image_bytes = await resp.read()
+            else:
+                await inter.response.send_message(content=EmojiMess.emoji_download_err)
+                return
+
+        if emoji_name:
+            emoji.name = emoji_name
+
+        new_emoji = await inter.guild.create_custom_emoji(name=emoji.name, image=image_bytes)
+        await inter.response.send_message(content=EmojiMess.emoji_add_success(emoji=new_emoji))
 
     @tasks.loop(time=time(5, 0, tzinfo=get_local_zone()))
     async def download_emojis_task(self):
         await self.download_emojis(self.base_guild)
-
-    @get_emoji.error
-    async def emoji_errors(self, inter: discord.Interaction, error):
-        if isinstance(error, commands.PartialEmojiConversionFailure):
-            await inter.send(EmojiMess.invalid_emoji, ephemeral=True)
-            return True

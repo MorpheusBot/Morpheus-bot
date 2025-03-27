@@ -24,25 +24,25 @@ class Memes(Base, commands.Cog):
         self.bot = bot
 
     @cached_property
-    def jany(self) -> discord.User:
-        return get_or_fetch_user(self.bot, Base.config.jany)
+    async def jany(self) -> discord.User:
+        return await get_or_fetch_user(self.bot, Base.config.jany)
 
     @cached_property
-    def ilbinek(self) -> discord.User:
-        return get_or_fetch_user(self.bot, Base.config.ilbinek)
+    async def ilbinek(self) -> discord.User:
+        return await get_or_fetch_user(self.bot, Base.config.ilbinek)
 
     @default_cooldown()
     @app_commands.command(name="drzpicu", description=MemesMess.drzpicu_brief)
     async def drzpicu(self, inter: discord.Interaction, user: discord.User = None):
         if user is None:
-            user = self.ilbinek
+            user = await self.ilbinek
         await inter.response.send_message(f"drz picu {user.mention}")
 
     @default_cooldown()
     @app_commands.command(name="nebudsalty", description=MemesMess.nebudsalty_brief)
     async def nebudsalty(self, inter: discord.Interaction, user: discord.User = None):
         if user is None:
-            user = self.jany
+            user = await self.jany
         await inter.response.send_message(f":salt: nebud salty {user.mention}")
 
     @app_commands.guild_only()
