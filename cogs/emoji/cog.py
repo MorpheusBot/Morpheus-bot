@@ -32,6 +32,16 @@ class EmojiGroup(app_commands.Group):
         super().__init__(*args, **kwargs)
 
 
+class PartialEmojiTransformer(discord.PartialEmoji):
+    @classmethod
+    async def transform(cls, interaction: discord.Interaction, emoji: str) -> discord.PartialEmoji:
+        ctx = await commands.Context.from_interaction(interaction)
+        try:
+            return await commands.PartialEmojiConverter().convert(ctx, emoji)
+        except commands.PartialEmojiConversionFailure:
+            raise commands.BadArgument()
+
+
 class Emoji(Base, commands.Cog):
     def __init__(self, bot: Morpheus):
         super().__init__()
@@ -70,27 +80,15 @@ class Emoji(Base, commands.Cog):
         await inter.edit_original_response(file=discord.File("emojis.zip"))
 
     @emoji.command(name="get", description=EmojiMess.get_emoji_brief)
-    async def get_emoji(self, inter: discord.Interaction, emoji: str):
+    async def get_emoji(self, inter: discord.Interaction, emoji: PartialEmojiTransformer):
         """Get emoji in full size"""
-        try:
-            emoji = await commands.PartialEmojiConverter().convert(self, emoji)
-        except commands.PartialEmojiConversionFailure:
-            await inter.response.send_message(content=EmojiMess.invalid_emoji, ephemeral=True)
-            return
-
         await inter.response.send_message(content=emoji.url)
 
     @has_permissions(administrator=True)
     @app_commands.allowed_contexts(guilds=True)
     @app_commands.command(name="add_server_emoji", description=EmojiMess.add_server_emoji_brief)
-    async def add_emoji(self, inter: discord.Interaction, emoji: str, emoji_name: str = None):
+    async def add_emoji(self, inter: discord.Interaction, emoji: PartialEmojiTransformer, emoji_name: str = None):
         """Add emoji to server"""
-        try:
-            emoji = await commands.PartialEmojiConverter().convert(self, emoji)
-        except commands.PartialEmojiConversionFailure:
-            await inter.response.send_message(content=EmojiMess.invalid_emoji, ephemeral=True)
-            return
-
         async with self.bot.morpheus_session.get(emoji.url) as resp:
             if resp.status == 200:
                 image_bytes = await resp.read()
@@ -107,3 +105,10 @@ class Emoji(Base, commands.Cog):
     @tasks.loop(time=time(5, 0, tzinfo=get_local_zone()))
     async def download_emojis_task(self):
         await self.download_emojis(self.base_guild)
+
+    @get_emoji.error
+    @add_emoji.error
+    async def cog_app_command_error(self, interaction: discord.Interaction, error: app_commands.AppCommandError):
+        if isinstance(error, app_commands.TransformerError) and error.transformer.annotation == PartialEmojiTransformer:
+            await interaction.response.send_message(EmojiMess.invalid_emoji, ephemeral=True)
+            return True
