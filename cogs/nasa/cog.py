@@ -35,16 +35,20 @@ class Nasa(Base, commands.Cog):
     async def nasa_image(self, inter: discord.Interaction):
         await inter.response.defer(ephemeral=self.check.botroom_check(inter))
         response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
-        embed, video = await create_nasa_embed(inter.user, response)
-        await inter.edit_original_response(embed=embed)
-        if video:
-            await inter.followup.send(video)
+        embed, attachment = await create_nasa_embed(self.bot.morpheus_session, inter.user, response)
+        if isinstance(attachment, discord.File):
+            await inter.edit_original_response(embed=embed, attachments=[attachment])
+        else:
+            await inter.edit_original_response(embed=embed)
+            await inter.followup.send(attachment)
 
     @tasks.loop(time=time(7, 0, tzinfo=get_local_zone()))
     async def send_nasa_image(self):
         response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
-        embed, video = await create_nasa_embed(self.bot.user, response)
+        embed, attachment = await create_nasa_embed(self.bot.morpheus_session, self.bot.user, response)
         for channel in self.nasa_channels:
-            await channel.send(embed=embed)
-            if video:
-                await channel.send(video)
+            if isinstance(attachment, discord.File):
+                await channel.send(embed=embed, file=attachment)
+            else:
+                await channel.send(embed=embed)
+                await channel.send(attachment)
