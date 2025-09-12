@@ -10,6 +10,7 @@ servers/
 emojis.zip
 *.db
 database/backup/backup.sql
+*.png
 
 # Environments
 .env

@@ -16,7 +16,7 @@ from custom import room_check
 from custom.cooldowns import default_cooldown
 from utils.general import get_local_zone
 
-from .features import create_nasa_embed, nasa_daily_image
+from .features import create_nasa_embed, filename, get_nasa_image, nasa_daily_image
 from .messages import NasaMess
 
 if TYPE_CHECKING:
@@ -27,7 +27,7 @@ class Nasa(Base, commands.Cog):
     def __init__(self, bot: Morpheus):
         super().__init__()
         self.bot = bot
-        self.tasks = [self.send_nasa_image.start()]
+        self.tasks = [self.send_nasa_image.start(), self.download_nasa_image.start()]
         self.check = room_check.RoomCheck(bot)
 
     @default_cooldown()
@@ -35,20 +35,26 @@ class Nasa(Base, commands.Cog):
     async def nasa_image(self, inter: discord.Interaction):
         await inter.response.defer(ephemeral=self.check.botroom_check(inter))
         response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
-        embed, attachment = await create_nasa_embed(self.bot.morpheus_session, inter.user, response)
-        if isinstance(attachment, discord.File):
-            await inter.edit_original_response(embed=embed, attachments=[attachment])
+        embed, attachment = await create_nasa_embed(inter.user, response)
+        if attachment:
+            await inter.followup.send(embed=embed)
+            await inter.followup.send(content=attachment)
         else:
-            await inter.edit_original_response(embed=embed)
-            await inter.followup.send(attachment)
+            await inter.followup.send(embed=embed, file=discord.File(filename))
 
     @tasks.loop(time=time(7, 0, tzinfo=get_local_zone()))
     async def send_nasa_image(self):
         response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
-        embed, attachment = await create_nasa_embed(self.bot.morpheus_session, self.bot.user, response)
+        await get_nasa_image(self.bot.morpheus_session, response)
+        embed, attachment = await create_nasa_embed(self.bot.user, response)
         for channel in self.nasa_channels:
-            if isinstance(attachment, discord.File):
-                await channel.send(embed=embed, file=attachment)
-            else:
+            if attachment:
                 await channel.send(embed=embed)
-                await channel.send(attachment)
+                await channel.send(content=attachment)
+            else:
+                await channel.send(embed=embed, file=discord.File(filename))
+
+    @tasks.loop(count=1)
+    async def download_nasa_image(self):
+        response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
+        await get_nasa_image(self.bot.morpheus_session, response)
