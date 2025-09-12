@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import io
 import os
+import re
 import zipfile
 from datetime import time
 from typing import TYPE_CHECKING
@@ -39,6 +40,11 @@ class PartialEmojiTransformer(discord.PartialEmoji):
         try:
             return await commands.PartialEmojiConverter().convert(ctx, emoji)
         except commands.PartialEmojiConversionFailure:
+            # Emoji from url
+            match = re.search(r"/emojis/(\d+)", emoji)
+            if match:
+                emoji_id = int(match.group(1))
+                return discord.PartialEmoji(name="emoji", id=emoji_id)
             raise commands.BadArgument()
 
 
