@@ -27,7 +27,9 @@ class Nasa(Base, commands.Cog):
     def __init__(self, bot: Morpheus):
         super().__init__()
         self.bot = bot
-        self.tasks = [self.send_nasa_image.start(), self.download_nasa_image.start()]
+        # NASA daily image has been discontinued at the moment
+        # self.tasks = [self.send_nasa_image.start(), self.download_nasa_image.start()]
+        self.tasks = []
         self.check = room_check.RoomCheck(bot)
 
     @default_cooldown()
