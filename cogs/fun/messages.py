@@ -9,3 +9,4 @@ class FunMess(GlobalMessages):
     dadjoke_brief = "Send a random dad joke or find by keyword"
     yo_mamajoke_brief = "Send a random yo mama joke"
     xkcd_brief = "Get the latest XKCD comic"
+    keyword_not_found = "I didn't find a joke like that."
