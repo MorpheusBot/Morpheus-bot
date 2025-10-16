@@ -136,7 +136,7 @@ class Fun(Base, commands.Cog):
         keyword: search for a certain keyword in a joke
         """
         if keyword is not None and ("&" in keyword or "?" in keyword):
-            await inter.response.send_message("I didn't find a joke like that.")
+            await inter.response.send_message(FunMess.keyword_not_found)
             return
 
         params: dict[str, str] = {"limit": "30"}
@@ -157,7 +157,7 @@ class Fun(Base, commands.Cog):
         if keyword is not None:
             res = fetched["results"]
             if len(res) == 0:
-                await inter.send("I didn't find a joke like that.")
+                await inter.response.send_message(FunMess.keyword_not_found)
                 return
             result = random.choice(res)
             result["joke"] = re.sub(
