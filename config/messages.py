@@ -13,17 +13,25 @@ class CallableString(str):
 
 
 class Formatable(type):
-    def __init__(cls, clsname, superclasses, attributedict):
-        cls.clsname = clsname
-
     def __getattribute__(cls, key):
         try:
-            return CallableString(object.__getattribute__(cls, key))
+            val = object.__getattribute__(cls, key)
         except AttributeError:
             try:
-                return CallableString(super().__getattribute__(key))
+                val = super().__getattribute__(key)
             except AttributeError:
-                raise AttributeError(f"{cls.clsname} class has no attribute {key}")
+                raise AttributeError(f"{cls.__name__} class has no attribute {key}")
+
+        if isinstance(val, str):
+            return CallableString(val)
+
+        # If it's a list/tuple of strings, wrap each string element so the
+        # returned container still behaves like a sequence of strings but each
+        # element is a CallableString (a str subclass) and can be called.
+        if isinstance(val, (list, tuple)):
+            return [x for x in val]
+
+        return val
 
 
 class GlobalMessages(metaclass=Formatable):
