@@ -85,6 +85,33 @@ class Emoji(Base, commands.Cog):
             await self.download_emojis(inter.guild)
         await inter.edit_original_response(file=discord.File("emojis.zip"))
 
+    @emoji.command(name="get_sticker", description=EmojiMess.get_sticker_brief)
+    async def get_sticker(
+        self,
+        inter: discord.Interaction,
+        message_url: str,
+    ):
+        await inter.response.defer()
+
+        ctx = await commands.Context.from_interaction(inter)
+        message: discord.Message = await commands.MessageConverter().convert(ctx, message_url)
+
+        if not message:
+            await inter.edit_original_response(content=EmojiMess.message_not_found)
+            return
+
+        # Check if the message has stickers
+        if not message.stickers:
+            await inter.edit_original_response(content=EmojiMess.no_stickers_found)
+            return
+
+        sticker = message.stickers[0]
+        with io.BytesIO() as image_binary:
+            await sticker.save(image_binary)
+            image_binary.seek(0)
+            filename = f"{sticker.name}.{sticker.format.name}"
+            await inter.edit_original_response(attachments=[discord.File(image_binary, filename=filename)])
+
     @emoji.command(name="get", description=EmojiMess.get_emoji_brief)
     async def get_emoji(self, inter: discord.Interaction, emoji: PartialEmojiTransformer):
         """Get emoji in full size"""

@@ -69,3 +69,4 @@ class GlobalMessages(metaclass=Formatable):
     channel_history_retrieving_messages = "Retrieving messages from channel {}."
 
     webhook_backup_brief = "Backups whole channel with webhook."
+    message_not_found = "Could not find the specified message. Make sure the message ID/message url are correct."
