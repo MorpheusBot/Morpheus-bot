@@ -19,7 +19,7 @@ class Instagram(Base, commands.Cog):
         super().__init__()
         self.bot = bot
         # Pattern to match any Instagram URLs (simple domain-based matching)
-        self.instagram_pattern = re.compile(r"(?:https://)?(?:www\.)?instagram\.com/[^\s]+")
+        self.instagram_pattern = re.compile(r"(?:https://)?(?:www\.)?instagram\.com/reel/[^\s]+")
 
     @commands.Cog.listener("on_message")
     async def on_message_instagram(self, message: discord.Message) -> None:
@@ -51,7 +51,9 @@ class Instagram(Base, commands.Cog):
                 message.content,
             )
 
-            await message.channel.send(f"{message.author.mention} >> {repost_content}")
+            await message.channel.send(
+                f"{message.author.mention} >> {repost_content}", allowed_mentions=discord.AllowedMentions.none()
+            )
 
         except discord.Forbidden:
             # Bot doesn't have permission to delete messages
