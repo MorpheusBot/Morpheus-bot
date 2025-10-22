@@ -30,6 +30,7 @@ dmypy.json
 .vscode/
 .ruff_cache/
 .devcontainer/
+.npm-global/
 
 # config
 config/config.toml
