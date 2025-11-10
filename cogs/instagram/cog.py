@@ -46,10 +46,10 @@ class Instagram(Base, commands.Cog):
             await message.delete()
 
             # Replace all instagram.com domains with kkinstagram.com in one pass
-            repost_content = self.instagram_pattern.sub(
-                lambda m: m.group(0).replace("instagram.com", "kkinstagram.com"),
-                message.content,
-            )
+            repost_content = re.sub(r'(?<!kk)instagram.com', 'kkinstagram.com', message.content)
+
+            # Strips '?key=val', usually tracking bullshit from the URL
+            repost_content = re.sub(r'/?\?[^ ]*', '', repost_content)
 
             await message.channel.send(
                 f"{message.author.mention} >> {repost_content}", allowed_mentions=discord.AllowedMentions.none()
