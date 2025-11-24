@@ -10,5 +10,5 @@ Unidecode~=1.4.0
 sqlalchemy[asyncio]~=2.0.44
 wavelink~=3.4.1
 cryptography~=46.0.3
-asyncpg~=0.30.0
+asyncpg~=0.31.0
 alembic~=1.17.2
