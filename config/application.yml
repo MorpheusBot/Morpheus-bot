@@ -21,6 +21,7 @@ plugins:
       - WEB
       - WEBEMBEDDED
       - TVHTML5EMBEDDED
+      - ANDROID_MUSIC
 
   lavasrc:
     providers: # Custom providers for track loading. This is the default
@@ -62,7 +63,7 @@ lavalink:
   plugins:
     - dependency: "com.github.topi314.lavasrc:lavasrc-plugin:4.8.1"
       snapshot: false
-    - dependency: "dev.lavalink.youtube:youtube-plugin:1.15.0"
+    - dependency: "dev.lavalink.youtube:youtube-plugin:1.16.0"
       snapshot: false
 
 #  pluginsDir: "./plugins" # optional, defaults to "./plugins"
