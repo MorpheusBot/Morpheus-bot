@@ -62,9 +62,6 @@ class Config:
     # Weather
     weather_token: str = get_attr(toml_dict, "weather", "token")
 
-    # NASA
-    nasa_token: str = get_attr(toml_dict, "nasa", "token")
-
 
 config = Config()
 

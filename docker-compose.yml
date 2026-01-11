@@ -52,6 +52,7 @@ services:
         networks:
             - lavalink
             - morpheus
+            - nasa_api
 
     lavalink:
         image: ghcr.io/lavalink-devs/lavalink:4
@@ -72,11 +73,21 @@ services:
                 delay: 5s
                 window: 20s
 
+    nasa-api:
+        image: ghcr.io/solumath/apod-api:latest
+        container_name: nasa-api
+        deploy:
+            restart_policy:
+                condition: unless-stopped
+                delay: 5s
+                window: 20s
+        networks:
+            - nasa_api
+
 networks:
     morpheus:
-        name: morpheus
     lavalink:
-        name: lavalink
+    nasa_api:
 
 volumes:
     morpheus_data:

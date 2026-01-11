@@ -36,6 +36,3 @@ ilbinek = 0
 
 [weather]
 token = ""
-
-[nasa]
-token = ""
