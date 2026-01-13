@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import asyncio
 import os
+from datetime import datetime
 
 import aiohttp
 import discord
@@ -53,10 +54,16 @@ async def create_nasa_embed(author: discord.User, response: dict) -> tuple[disco
     """
     Create embed for NASA API response
     """
+
+    date_str = response["date"]
+    date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+    formatted_date = date_obj.strftime("%y%m%d")
+    nasa_url = f"https://apod.nasa.gov/apod/ap{formatted_date}.html"
+
     embed = discord.Embed(
         title=response["title"],
         description=response["explanation"],
-        url=NasaMess.nasa_url,
+        url=nasa_url,
         color=discord.Color.blurple(),
     )
     add_author_footer(embed, author)

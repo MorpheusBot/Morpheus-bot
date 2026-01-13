@@ -33,12 +33,14 @@ class Nasa(Base, commands.Cog):
     @default_cooldown()
     @app_commands.command(name="nasa_daily_image", description=NasaMess.nasa_image_brief)
     async def nasa_image(self, inter: discord.Interaction):
-        await inter.response.defer(ephemeral=self.check.botroom_check(inter))
+        ephemeral = self.check.botroom_check(inter)
+        await inter.response.defer(ephemeral=ephemeral)
+
         response = await nasa_daily_image(self.bot.morpheus_session)
         embed, attachment = await create_nasa_embed(inter.user, response)
         if attachment:
             await inter.followup.send(embed=embed)
-            await inter.followup.send(content=attachment)
+            await inter.followup.send(content=attachment, ephemeral=ephemeral)
         else:
             await inter.followup.send(embed=embed, file=discord.File(filename))
 
