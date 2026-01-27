@@ -58,5 +58,5 @@ class Nasa(Base, commands.Cog):
 
     @tasks.loop(count=1)
     async def download_nasa_image(self):
-        response = await nasa_daily_image(self.bot.morpheus_session, self.config.nasa_token)
+        response = await nasa_daily_image(self.bot.morpheus_session)
         await get_nasa_image(self.bot.morpheus_session, response)
