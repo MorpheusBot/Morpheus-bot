@@ -102,7 +102,15 @@ docker compose down
 
 Logs are stored in `morpheus.log` file or `logs` directory. Errors are printed to the console, morpheus.log and sent to the `#bot-dev-channel` if you configured one.
 
-Database-related tips can be found in [database README](database/README.md).
+#### Database Migrations
+
+After pulling new changes, you may need to run database migrations:
+
+```bash
+source venv/bin/activate && alembic upgrade head
+```
+
+More database-related tips and migration documentation can be found in [database README](database/README.md).
 
 ## Pre-commit (useful for dev)
 

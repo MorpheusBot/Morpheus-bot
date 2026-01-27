@@ -32,25 +32,37 @@ target_metadata = Base.metadata
 
 
 def get_url() -> str:
-    p = subprocess.Popen(["docker", "ps"], stdout=subprocess.PIPE)
+    try:
+        p = subprocess.Popen(["docker", "ps"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, _ = p.communicate()
 
-    lineNumber = 1
-    for line in p.stdout.readlines():
-        fields = line.split()
-        if lineNumber > 1:
-            containerId = fields[0]
-            containerName = fields[-1]
-            if "morpheusbot-db" not in containerName.decode("utf-8"):
+        lineNumber = 1
+        for line in stdout.decode("utf-8").split("\n"):
+            if not line.strip():
                 continue
+            fields = line.split()
+            if lineNumber > 1:
+                containerId = fields[0]
+                containerName = fields[-1]
+                if "morpheus-postgres" not in containerName:
+                    continue
 
-            inspect = subprocess.run(["docker", "inspect", containerId], stdout=subprocess.PIPE)
-            data = json.loads(inspect.stdout.decode("utf-8"))
-            networkMode = data[0]["HostConfig"]["NetworkMode"]
-            ip_address = data[0]["NetworkSettings"]["Networks"][networkMode]["IPAddress"]
-            db_url = morpheus_config.db_string.replace("db", ip_address)
-            return db_url
+                inspect = subprocess.run(["docker", "inspect", containerId], stdout=subprocess.PIPE)
+                data = json.loads(inspect.stdout.decode("utf-8"))
+                networkMode = data[0]["HostConfig"]["NetworkMode"]
+                ip_address = data[0]["NetworkSettings"]["Networks"][networkMode]["IPAddress"]
+                db_url = morpheus_config.db_string.replace("morpheus-postgres", ip_address)
+                return db_url
 
-        lineNumber += 1
+            lineNumber += 1
+
+        # Container not found, try using service name (running inside Docker)
+        return morpheus_config.db_string.replace("morpheus-postgres", "postgres")
+
+    except FileNotFoundError:
+        # Docker command not found, likely running inside container
+        # Use the db_string directly with service name instead of IP
+        return morpheus_config.db_string.replace("morpheus-postgres", "postgres")
 
 
 def run_migrations_offline() -> None:
