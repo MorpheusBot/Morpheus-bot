@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import io
 import random
 from typing import TYPE_CHECKING
 
@@ -20,9 +21,9 @@ if TYPE_CHECKING:
 
 async def autocomp_replies(inter: discord.Interaction, user_input: str) -> list[app_commands.Choice[str]]:
     user_input = user_input.lower()
-    phrases = await GuildDB.get_phrases(str(inter.guild.id))
+    phrases_dict = await GuildDB.get_phrases(str(inter.guild.id))
     return [
-        app_commands.Choice(name=phrase, value=phrase) for phrase in phrases.keys() if user_input in phrase.lower()
+        app_commands.Choice(name=phrase, value=phrase) for phrase in phrases_dict.keys() if user_input in phrase.lower()
     ][:10]
 
 
@@ -62,31 +63,68 @@ class GuildConfig(Base, commands.Cog):
     @commands.Cog.listener("on_message")
     async def reply(self, message: discord.Message):
         """sends messages to users depending on the content"""
-        if message.guild is None:
+        if message.guild is None or message.author.bot:
             return
 
-        if message.author.bot:
-            return
-        elif "uh oh" in message.content:
+        if "uh oh" in message.content:
             await message.channel.send("uh oh")
-        elif f"<@!{self.bot.user.id}>" in message.content or f"<@{self.bot.user.id}>" in message.content:
+            return
+
+        if f"<@!{self.bot.user.id}>" in message.content or f"<@{self.bot.user.id}>" in message.content:
             await message.channel.send(random.choice(GuildConfigMess.Morpheus))
+            return
+
+        # Check for phrase matches
+        phrases_dict: dict[str, GuildPhraseDB] = self.phrases.get(message.guild.id)
+        if not phrases_dict:
+            return
+
+        phrase_obj = phrases_dict.get(message.content.lower())
+        if not phrase_obj:
+            return
+
+        # Check if reply is restricted to specific users
+        if phrase_obj.specific_users_id and str(message.author.id) not in phrase_obj.specific_users_id:
+            return
+
+        # Send reply with or without attachment
+        if phrase_obj.attachment_data and phrase_obj.attachment_filename:
+            file = discord.File(io.BytesIO(phrase_obj.attachment_data), filename=phrase_obj.attachment_filename)
+            await message.channel.send(phrase_obj.value, file=file)
         else:
-            phrases = self.phrases.get(message.guild.id)
-            if not phrases:
-                return
-            for key, value in phrases.items():
-                if key.lower() == message.content.lower():
-                    await message.channel.send(value)
+            await message.channel.send(phrase_obj.value)
 
     @reply_group.command(name="add", description=GuildConfigMess.add_reply_brief)
-    async def add_reply(self, inter: discord.Interaction, key: str, reply: str):
-        phrase = await GuildPhraseDB.add_phrase(str(inter.guild.id), key, reply)
+    async def add_reply(
+        self,
+        inter: discord.Interaction,
+        key: str,
+        reply: str,
+        attachment: discord.Attachment = None,
+        user1: discord.User = None,
+        user2: discord.User = None,
+        user3: discord.User = None,
+        user4: discord.User = None,
+        user5: discord.User = None,
+    ):
+        specific_users_id = set(str(user.id) for user in [user1, user2, user3, user4, user5] if user)
+
+        # Download attachment data if provided
+        attachment_data = None
+        attachment_filename = None
+        if attachment:
+            attachment_data = await attachment.read()
+            attachment_filename = attachment.filename
+
+        phrase = await GuildPhraseDB.add_phrase(
+            str(inter.guild.id), key, reply, attachment_data, attachment_filename, specific_users_id
+        )
         if not phrase:
             await inter.response.send_message(GuildConfigMess.reply_exists(key=key))
             return
 
-        self.phrases[inter.guild.id] = await GuildDB.get_phrases(str(inter.guild.id))
+        guild_db = await GuildDB.get_guild(str(inter.guild.id))
+        self.phrases[inter.guild.id] = guild_db.phrases_dict
         await inter.response.send_message(GuildConfigMess.reply_added(key=key))
 
     @reply_group.command(name="remove", description=GuildConfigMess.rem_reply_brief)
@@ -97,7 +135,8 @@ class GuildConfig(Base, commands.Cog):
             await inter.response.send_message(GuildConfigMess.reply_not_found(key=key))
             return
 
-        self.phrases[inter.guild.id] = await GuildDB.get_phrases(str(inter.guild.id))
+        guild_db = await GuildDB.get_guild(str(inter.guild.id))
+        self.phrases[inter.guild.id] = guild_db.phrases_dict
         await inter.response.send_message(GuildConfigMess.reply_removed(key=key))
 
     @reply_group.command(name="list", description=GuildConfigMess.list_reply_brief)

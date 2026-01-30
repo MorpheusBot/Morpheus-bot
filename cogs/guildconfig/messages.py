@@ -5,7 +5,7 @@ class GuildConfigMess(GlobalMessages):
     info_channel_set = "Info channel set to {info_channel}"
 
     edit_config_brief = "Edit guild config"
-    add_reply_brief = "Add autoreply for the server"
+    add_reply_brief = "Add autoreply for the server. Can be specific to users"
     rem_reply_brief = "Remove autoreply for the server"
     list_reply_brief = "List autoreplies for the server"
     reply_exists = "Reply for `{key}` already exists"
