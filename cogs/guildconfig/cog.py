@@ -149,7 +149,10 @@ class GuildConfig(Base, commands.Cog):
         blue_c = "\u001b[2;34m"
         pink_c = "\u001b[2;35m"
         default_c = "\u001b[0m"
-        replies_list = [f"{blue_c}{key}{default_c}: {pink_c}{value}{default_c}\n" for key, value in phrases.items()]
+        replies_list = [
+            f"{blue_c}{key}{(' (+ attachment)' if phrase_obj.attachment_data else '')}{default_c}: {pink_c}{phrase_obj.value}{default_c}\n"
+            for key, phrase_obj in phrases.items()
+        ]
         replies_str = "".join(replies_list)
         replies = cut_string_by_words(replies_str, 1800, "\n")
         await inter.response.send_message(f"{GuildConfigMess.reply_list}```ansi\n{replies[0]}```")

@@ -42,7 +42,7 @@ class GuildDB(Base):
             await session.commit()
 
     @classmethod
-    async def get_phrases(cls, guild_id: str) -> dict[str, str] | None:
+    async def get_phrases(cls, guild_id: str) -> dict[str, GuildPhraseDB] | None:
         async with database.get_session() as session:
             guild = await session.get(cls, guild_id)
             if not guild:
