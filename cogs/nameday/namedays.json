@@ -1,0 +1,3662 @@
+{
+  "01-01": {
+    "cz": {
+      "name": "Nový rok",
+      "holiday": "Den obnovy samostatného českého státu, Nový rok"
+    },
+    "sk": {
+      "name": "Nový rok",
+      "holiday": "Deň vzniku Slovenskej republiky"
+    }
+  },
+  "01-02": {
+    "cz": {
+      "name": "Karina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alexandra",
+      "holiday": ""
+    }
+  },
+  "01-03": {
+    "cz": {
+      "name": "Radmila",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Daniela",
+      "holiday": ""
+    }
+  },
+  "01-04": {
+    "cz": {
+      "name": "Diana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Drahoslav",
+      "holiday": ""
+    }
+  },
+  "01-05": {
+    "cz": {
+      "name": "Dalimil",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Andrea",
+      "holiday": ""
+    }
+  },
+  "01-06": {
+    "cz": {
+      "name": "Tři králové",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Antónia",
+      "holiday": "Zjavenie Pána (Traja králi)"
+    }
+  },
+  "01-07": {
+    "cz": {
+      "name": "Vilma",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohuslava",
+      "holiday": ""
+    }
+  },
+  "01-08": {
+    "cz": {
+      "name": "Čestmír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Severín",
+      "holiday": ""
+    }
+  },
+  "01-09": {
+    "cz": {
+      "name": "Vladan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alexej",
+      "holiday": ""
+    }
+  },
+  "01-10": {
+    "cz": {
+      "name": "Břetislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dáša",
+      "holiday": ""
+    }
+  },
+  "01-11": {
+    "cz": {
+      "name": "Bohdana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Malvína",
+      "holiday": ""
+    }
+  },
+  "01-12": {
+    "cz": {
+      "name": "Pravoslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ernest",
+      "holiday": ""
+    }
+  },
+  "01-13": {
+    "cz": {
+      "name": "Edita",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Rastislav",
+      "holiday": ""
+    }
+  },
+  "01-14": {
+    "cz": {
+      "name": "Radovan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Radovan",
+      "holiday": ""
+    }
+  },
+  "01-15": {
+    "cz": {
+      "name": "Alice",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dobroslav",
+      "holiday": ""
+    }
+  },
+  "01-16": {
+    "cz": {
+      "name": "Ctirad",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kristína",
+      "holiday": ""
+    }
+  },
+  "01-17": {
+    "cz": {
+      "name": "Drahoslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Nataša",
+      "holiday": ""
+    }
+  },
+  "01-18": {
+    "cz": {
+      "name": "Vladislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohdana",
+      "holiday": ""
+    }
+  },
+  "01-19": {
+    "cz": {
+      "name": "Doubravka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Drahomíra",
+      "holiday": ""
+    }
+  },
+  "01-20": {
+    "cz": {
+      "name": "Ilona, Sebastián",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dalibor",
+      "holiday": ""
+    }
+  },
+  "01-21": {
+    "cz": {
+      "name": "Běla",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vincent",
+      "holiday": ""
+    }
+  },
+  "01-22": {
+    "cz": {
+      "name": "Slavomír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zora",
+      "holiday": ""
+    }
+  },
+  "01-23": {
+    "cz": {
+      "name": "Zdeněk",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Miloš",
+      "holiday": ""
+    }
+  },
+  "01-24": {
+    "cz": {
+      "name": "Milena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Timotej",
+      "holiday": ""
+    }
+  },
+  "01-25": {
+    "cz": {
+      "name": "Miloš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gejza",
+      "holiday": ""
+    }
+  },
+  "01-26": {
+    "cz": {
+      "name": "Zora",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Tamara",
+      "holiday": ""
+    }
+  },
+  "01-27": {
+    "cz": {
+      "name": "Ingrid",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohuš",
+      "holiday": ""
+    }
+  },
+  "01-28": {
+    "cz": {
+      "name": "Otýlie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alfonz",
+      "holiday": ""
+    }
+  },
+  "01-29": {
+    "cz": {
+      "name": "Zdislava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gašpar",
+      "holiday": ""
+    }
+  },
+  "01-30": {
+    "cz": {
+      "name": "Robin",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ema",
+      "holiday": ""
+    }
+  },
+  "01-31": {
+    "cz": {
+      "name": "Marika",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Emil",
+      "holiday": ""
+    }
+  },
+  "02-01": {
+    "cz": {
+      "name": "Hynek",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Tatiana",
+      "holiday": ""
+    }
+  },
+  "02-02": {
+    "cz": {
+      "name": "Nela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Erika, Erik",
+      "holiday": ""
+    }
+  },
+  "02-03": {
+    "cz": {
+      "name": "Blažej",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Blažej",
+      "holiday": ""
+    }
+  },
+  "02-04": {
+    "cz": {
+      "name": "Jarmila",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Veronika",
+      "holiday": ""
+    }
+  },
+  "02-05": {
+    "cz": {
+      "name": "Dobromila",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Agáta",
+      "holiday": ""
+    }
+  },
+  "02-06": {
+    "cz": {
+      "name": "Vanda",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dorota",
+      "holiday": ""
+    }
+  },
+  "02-07": {
+    "cz": {
+      "name": "Veronika",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vanda",
+      "holiday": ""
+    }
+  },
+  "02-08": {
+    "cz": {
+      "name": "Milada",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zoja",
+      "holiday": ""
+    }
+  },
+  "02-09": {
+    "cz": {
+      "name": "Apolena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zdenko",
+      "holiday": ""
+    }
+  },
+  "02-10": {
+    "cz": {
+      "name": "Mojmír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gabriela",
+      "holiday": ""
+    }
+  },
+  "02-11": {
+    "cz": {
+      "name": "Božena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dezider",
+      "holiday": ""
+    }
+  },
+  "02-12": {
+    "cz": {
+      "name": "Slavěna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Perla",
+      "holiday": ""
+    }
+  },
+  "02-13": {
+    "cz": {
+      "name": "Věnceslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Arpád",
+      "holiday": ""
+    }
+  },
+  "02-14": {
+    "cz": {
+      "name": "Valentýn",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Valentín",
+      "holiday": ""
+    }
+  },
+  "02-15": {
+    "cz": {
+      "name": "Jiřina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Pravoslav",
+      "holiday": ""
+    }
+  },
+  "02-16": {
+    "cz": {
+      "name": "Ljuba",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ida",
+      "holiday": ""
+    }
+  },
+  "02-17": {
+    "cz": {
+      "name": "Miloslava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Miloslava",
+      "holiday": ""
+    }
+  },
+  "02-18": {
+    "cz": {
+      "name": "Gizela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jaromír",
+      "holiday": ""
+    }
+  },
+  "02-19": {
+    "cz": {
+      "name": "Patrik",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vlasta",
+      "holiday": ""
+    }
+  },
+  "02-20": {
+    "cz": {
+      "name": "Oldřich",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lívia",
+      "holiday": ""
+    }
+  },
+  "02-21": {
+    "cz": {
+      "name": "Lenka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Eleonóra",
+      "holiday": ""
+    }
+  },
+  "02-22": {
+    "cz": {
+      "name": "Petr",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Etela",
+      "holiday": ""
+    }
+  },
+  "02-23": {
+    "cz": {
+      "name": "Svatopluk",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Roman, Romana",
+      "holiday": ""
+    }
+  },
+  "02-24": {
+    "cz": {
+      "name": "Matěj",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Matej",
+      "holiday": ""
+    }
+  },
+  "02-25": {
+    "cz": {
+      "name": "Liliana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Frederik, Frederika",
+      "holiday": ""
+    }
+  },
+  "02-26": {
+    "cz": {
+      "name": "Dorota",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Viktor",
+      "holiday": ""
+    }
+  },
+  "02-27": {
+    "cz": {
+      "name": "Alexandr",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alexander",
+      "holiday": ""
+    }
+  },
+  "02-28": {
+    "cz": {
+      "name": "Lumír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zlatica",
+      "holiday": ""
+    }
+  },
+  "02-29": {
+    "cz": {
+      "name": "Horymír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Radomír",
+      "holiday": ""
+    }
+  },
+  "03-01": {
+    "cz": {
+      "name": "Bedřich",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Albín",
+      "holiday": ""
+    }
+  },
+  "03-02": {
+    "cz": {
+      "name": "Anežka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Anežka",
+      "holiday": ""
+    }
+  },
+  "03-03": {
+    "cz": {
+      "name": "Kamil",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohumil, Bohumila",
+      "holiday": ""
+    }
+  },
+  "03-04": {
+    "cz": {
+      "name": "Stela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kazimír",
+      "holiday": ""
+    }
+  },
+  "03-05": {
+    "cz": {
+      "name": "Kazimír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Fridrich",
+      "holiday": ""
+    }
+  },
+  "03-06": {
+    "cz": {
+      "name": "Miroslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Radoslav, Radoslava",
+      "holiday": ""
+    }
+  },
+  "03-07": {
+    "cz": {
+      "name": "Tomáš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Tomáš",
+      "holiday": ""
+    }
+  },
+  "03-08": {
+    "cz": {
+      "name": "Gabriela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alan, Alana",
+      "holiday": ""
+    }
+  },
+  "03-09": {
+    "cz": {
+      "name": "Františka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Františka",
+      "holiday": ""
+    }
+  },
+  "03-10": {
+    "cz": {
+      "name": "Viktorie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Branislav, Bruno",
+      "holiday": ""
+    }
+  },
+  "03-11": {
+    "cz": {
+      "name": "Anděla",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Angela, Angelika",
+      "holiday": ""
+    }
+  },
+  "03-12": {
+    "cz": {
+      "name": "Řehoř",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gregor",
+      "holiday": ""
+    }
+  },
+  "03-13": {
+    "cz": {
+      "name": "Růžena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vlastimil",
+      "holiday": ""
+    }
+  },
+  "03-14": {
+    "cz": {
+      "name": "Rút",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Matilda",
+      "holiday": ""
+    }
+  },
+  "03-15": {
+    "cz": {
+      "name": "Ida",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Svetlana",
+      "holiday": ""
+    }
+  },
+  "03-16": {
+    "cz": {
+      "name": "Elena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Boleslav",
+      "holiday": ""
+    }
+  },
+  "03-17": {
+    "cz": {
+      "name": "Vlastimil",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľubica",
+      "holiday": ""
+    }
+  },
+  "03-18": {
+    "cz": {
+      "name": "Eduard",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Eduard",
+      "holiday": ""
+    }
+  },
+  "03-19": {
+    "cz": {
+      "name": "Josef",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jozef",
+      "holiday": ""
+    }
+  },
+  "03-20": {
+    "cz": {
+      "name": "Světlana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Víťazoslav",
+      "holiday": ""
+    }
+  },
+  "03-21": {
+    "cz": {
+      "name": "Radek",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Blahoslav",
+      "holiday": ""
+    }
+  },
+  "03-22": {
+    "cz": {
+      "name": "Leona",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Beňadik",
+      "holiday": ""
+    }
+  },
+  "03-23": {
+    "cz": {
+      "name": "Ivona",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Adrián",
+      "holiday": ""
+    }
+  },
+  "03-24": {
+    "cz": {
+      "name": "Gabriel",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gabriel",
+      "holiday": ""
+    }
+  },
+  "03-25": {
+    "cz": {
+      "name": "Marián",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marián",
+      "holiday": ""
+    }
+  },
+  "03-26": {
+    "cz": {
+      "name": "Emanuel",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Emanuel",
+      "holiday": ""
+    }
+  },
+  "03-27": {
+    "cz": {
+      "name": "Dita",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alena",
+      "holiday": ""
+    }
+  },
+  "03-28": {
+    "cz": {
+      "name": "Soňa",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Soňa",
+      "holiday": ""
+    }
+  },
+  "03-29": {
+    "cz": {
+      "name": "Taťána",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Miroslav",
+      "holiday": ""
+    }
+  },
+  "03-30": {
+    "cz": {
+      "name": "Arnošt",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vieroslava",
+      "holiday": ""
+    }
+  },
+  "03-31": {
+    "cz": {
+      "name": "Kvido",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Benjamín",
+      "holiday": ""
+    }
+  },
+  "04-01": {
+    "cz": {
+      "name": "Hugo",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Hugo",
+      "holiday": ""
+    }
+  },
+  "04-02": {
+    "cz": {
+      "name": "Erika",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zita",
+      "holiday": ""
+    }
+  },
+  "04-03": {
+    "cz": {
+      "name": "Richard",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Richard",
+      "holiday": ""
+    }
+  },
+  "04-04": {
+    "cz": {
+      "name": "Ivana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Izidor",
+      "holiday": ""
+    }
+  },
+  "04-05": {
+    "cz": {
+      "name": "Miroslava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Miroslava",
+      "holiday": ""
+    }
+  },
+  "04-06": {
+    "cz": {
+      "name": "Vendula",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Irena",
+      "holiday": ""
+    }
+  },
+  "04-07": {
+    "cz": {
+      "name": "Heřman",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zoltán",
+      "holiday": ""
+    }
+  },
+  "04-08": {
+    "cz": {
+      "name": "Ema",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Albert",
+      "holiday": ""
+    }
+  },
+  "04-09": {
+    "cz": {
+      "name": "Dušan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Milena",
+      "holiday": ""
+    }
+  },
+  "04-10": {
+    "cz": {
+      "name": "Darja",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Igor",
+      "holiday": ""
+    }
+  },
+  "04-11": {
+    "cz": {
+      "name": "Izabela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Július",
+      "holiday": ""
+    }
+  },
+  "04-12": {
+    "cz": {
+      "name": "Julius",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Estera",
+      "holiday": ""
+    }
+  },
+  "04-13": {
+    "cz": {
+      "name": "Aleš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Aleš",
+      "holiday": ""
+    }
+  },
+  "04-14": {
+    "cz": {
+      "name": "Vincenc",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Justína",
+      "holiday": ""
+    }
+  },
+  "04-15": {
+    "cz": {
+      "name": "Anastázie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Fedor",
+      "holiday": ""
+    }
+  },
+  "04-16": {
+    "cz": {
+      "name": "Irena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dana, Danica",
+      "holiday": ""
+    }
+  },
+  "04-17": {
+    "cz": {
+      "name": "Rudolf",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Rudolf",
+      "holiday": ""
+    }
+  },
+  "04-18": {
+    "cz": {
+      "name": "Valérie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Valér",
+      "holiday": ""
+    }
+  },
+  "04-19": {
+    "cz": {
+      "name": "Rostislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jela",
+      "holiday": ""
+    }
+  },
+  "04-20": {
+    "cz": {
+      "name": "Marcela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marcel",
+      "holiday": ""
+    }
+  },
+  "04-21": {
+    "cz": {
+      "name": "Alexandra",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ervín",
+      "holiday": ""
+    }
+  },
+  "04-22": {
+    "cz": {
+      "name": "Evženie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Slavomír",
+      "holiday": ""
+    }
+  },
+  "04-23": {
+    "cz": {
+      "name": "Vojtěch",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vojtech",
+      "holiday": ""
+    }
+  },
+  "04-24": {
+    "cz": {
+      "name": "Jiří",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Juraj",
+      "holiday": ""
+    }
+  },
+  "04-25": {
+    "cz": {
+      "name": "Marek",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marek",
+      "holiday": ""
+    }
+  },
+  "04-26": {
+    "cz": {
+      "name": "Oto",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jaroslava",
+      "holiday": ""
+    }
+  },
+  "04-27": {
+    "cz": {
+      "name": "Jaroslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jaroslav",
+      "holiday": ""
+    }
+  },
+  "04-28": {
+    "cz": {
+      "name": "Vlastislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jarmila",
+      "holiday": ""
+    }
+  },
+  "04-29": {
+    "cz": {
+      "name": "Robert",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lea",
+      "holiday": ""
+    }
+  },
+  "04-30": {
+    "cz": {
+      "name": "Blahoslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Anastázia",
+      "holiday": ""
+    }
+  },
+  "05-01": {
+    "cz": {
+      "name": "Svátek práce",
+      "holiday": "Svátek práce"
+    },
+    "sk": {
+      "name": "Sviatok práce",
+      "holiday": "Sviatok práce"
+    }
+  },
+  "05-02": {
+    "cz": {
+      "name": "Zikmund",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Žigmund",
+      "holiday": ""
+    }
+  },
+  "05-03": {
+    "cz": {
+      "name": "Alexej",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Galina",
+      "holiday": ""
+    }
+  },
+  "05-04": {
+    "cz": {
+      "name": "Květoslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Florián",
+      "holiday": ""
+    }
+  },
+  "05-05": {
+    "cz": {
+      "name": "Klaudie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lesana, Lesia",
+      "holiday": ""
+    }
+  },
+  "05-06": {
+    "cz": {
+      "name": "Radoslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Hermína",
+      "holiday": ""
+    }
+  },
+  "05-07": {
+    "cz": {
+      "name": "Stanislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Monika",
+      "holiday": ""
+    }
+  },
+  "05-08": {
+    "cz": {
+      "name": "Den vítězství",
+      "holiday": "Den vítězství"
+    },
+    "sk": {
+      "name": "Ingrida",
+      "holiday": "Deň víťazstva nad fašizmom"
+    }
+  },
+  "05-09": {
+    "cz": {
+      "name": "Ctibor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Roland",
+      "holiday": ""
+    }
+  },
+  "05-10": {
+    "cz": {
+      "name": "Blažena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Viktória",
+      "holiday": ""
+    }
+  },
+  "05-11": {
+    "cz": {
+      "name": "Svatava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Blažena",
+      "holiday": ""
+    }
+  },
+  "05-12": {
+    "cz": {
+      "name": "Pankrác",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Pankrác",
+      "holiday": ""
+    }
+  },
+  "05-13": {
+    "cz": {
+      "name": "Servác",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Servác",
+      "holiday": ""
+    }
+  },
+  "05-14": {
+    "cz": {
+      "name": "Bonifác",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bonifác",
+      "holiday": ""
+    }
+  },
+  "05-15": {
+    "cz": {
+      "name": "Žofie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Žofia",
+      "holiday": ""
+    }
+  },
+  "05-16": {
+    "cz": {
+      "name": "Přemysl",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Svetozár",
+      "holiday": ""
+    }
+  },
+  "05-17": {
+    "cz": {
+      "name": "Aneta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gizela",
+      "holiday": ""
+    }
+  },
+  "05-18": {
+    "cz": {
+      "name": "Nataša",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Viola",
+      "holiday": ""
+    }
+  },
+  "05-19": {
+    "cz": {
+      "name": "Ivo",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gertrúda",
+      "holiday": ""
+    }
+  },
+  "05-20": {
+    "cz": {
+      "name": "Zbyšek",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bernard",
+      "holiday": ""
+    }
+  },
+  "05-21": {
+    "cz": {
+      "name": "Monika",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zina",
+      "holiday": ""
+    }
+  },
+  "05-22": {
+    "cz": {
+      "name": "Emil",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Júlia, Juliana",
+      "holiday": ""
+    }
+  },
+  "05-23": {
+    "cz": {
+      "name": "Vladimír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Želmíra",
+      "holiday": ""
+    }
+  },
+  "05-24": {
+    "cz": {
+      "name": "Jana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ela",
+      "holiday": ""
+    }
+  },
+  "05-25": {
+    "cz": {
+      "name": "Viola",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Urban",
+      "holiday": ""
+    }
+  },
+  "05-26": {
+    "cz": {
+      "name": "Filip",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dušan",
+      "holiday": ""
+    }
+  },
+  "05-27": {
+    "cz": {
+      "name": "Valdemar",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Iveta",
+      "holiday": ""
+    }
+  },
+  "05-28": {
+    "cz": {
+      "name": "Vilém",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Viliam",
+      "holiday": ""
+    }
+  },
+  "05-29": {
+    "cz": {
+      "name": "Maxim",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vilma",
+      "holiday": ""
+    }
+  },
+  "05-30": {
+    "cz": {
+      "name": "Ferdinand",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ferdinand",
+      "holiday": ""
+    }
+  },
+  "05-31": {
+    "cz": {
+      "name": "Kamila",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Petronela, Petrana",
+      "holiday": ""
+    }
+  },
+  "06-01": {
+    "cz": {
+      "name": "Laura",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Žaneta",
+      "holiday": ""
+    }
+  },
+  "06-02": {
+    "cz": {
+      "name": "Jarmil",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Xénia",
+      "holiday": ""
+    }
+  },
+  "06-03": {
+    "cz": {
+      "name": "Tamara",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Karolína",
+      "holiday": ""
+    }
+  },
+  "06-04": {
+    "cz": {
+      "name": "Dalibor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lenka",
+      "holiday": ""
+    }
+  },
+  "06-05": {
+    "cz": {
+      "name": "Dobroslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Laura",
+      "holiday": ""
+    }
+  },
+  "06-06": {
+    "cz": {
+      "name": "Norbert",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Norbert",
+      "holiday": ""
+    }
+  },
+  "06-07": {
+    "cz": {
+      "name": "Iveta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Róbert",
+      "holiday": ""
+    }
+  },
+  "06-08": {
+    "cz": {
+      "name": "Medard",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Medard",
+      "holiday": ""
+    }
+  },
+  "06-09": {
+    "cz": {
+      "name": "Stanislava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Stanislava",
+      "holiday": ""
+    }
+  },
+  "06-10": {
+    "cz": {
+      "name": "Gita",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Margaréta",
+      "holiday": ""
+    }
+  },
+  "06-11": {
+    "cz": {
+      "name": "Bruno",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dobroslava",
+      "holiday": ""
+    }
+  },
+  "06-12": {
+    "cz": {
+      "name": "Antonie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zlatko",
+      "holiday": ""
+    }
+  },
+  "06-13": {
+    "cz": {
+      "name": "Antonín",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Anton",
+      "holiday": ""
+    }
+  },
+  "06-14": {
+    "cz": {
+      "name": "Roland",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vasil",
+      "holiday": ""
+    }
+  },
+  "06-15": {
+    "cz": {
+      "name": "Vít",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vít",
+      "holiday": ""
+    }
+  },
+  "06-16": {
+    "cz": {
+      "name": "Zbyněk",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Blanka",
+      "holiday": ""
+    }
+  },
+  "06-17": {
+    "cz": {
+      "name": "Adolf",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Adolf",
+      "holiday": ""
+    }
+  },
+  "06-18": {
+    "cz": {
+      "name": "Milan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vratislav",
+      "holiday": ""
+    }
+  },
+  "06-19": {
+    "cz": {
+      "name": "Leoš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alfréd",
+      "holiday": ""
+    }
+  },
+  "06-20": {
+    "cz": {
+      "name": "Květa",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Valéria",
+      "holiday": ""
+    }
+  },
+  "06-21": {
+    "cz": {
+      "name": "Alois",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alojz",
+      "holiday": ""
+    }
+  },
+  "06-22": {
+    "cz": {
+      "name": "Pavla",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Paulína",
+      "holiday": ""
+    }
+  },
+  "06-23": {
+    "cz": {
+      "name": "Zdeňka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Sidónia",
+      "holiday": ""
+    }
+  },
+  "06-24": {
+    "cz": {
+      "name": "Jan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ján",
+      "holiday": ""
+    }
+  },
+  "06-25": {
+    "cz": {
+      "name": "Ivan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Tadeáš",
+      "holiday": ""
+    }
+  },
+  "06-26": {
+    "cz": {
+      "name": "Adriana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Adriana",
+      "holiday": ""
+    }
+  },
+  "06-27": {
+    "cz": {
+      "name": "Ladislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ladislav, Ladislava",
+      "holiday": ""
+    }
+  },
+  "06-28": {
+    "cz": {
+      "name": "Lubomír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Beata",
+      "holiday": ""
+    }
+  },
+  "06-29": {
+    "cz": {
+      "name": "Petr",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Peter, Pavol, Petra",
+      "holiday": ""
+    }
+  },
+  "06-30": {
+    "cz": {
+      "name": "Šárka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Melánia",
+      "holiday": ""
+    }
+  },
+  "07-01": {
+    "cz": {
+      "name": "Jaroslava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Diana",
+      "holiday": ""
+    }
+  },
+  "07-02": {
+    "cz": {
+      "name": "Patricie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Berta",
+      "holiday": ""
+    }
+  },
+  "07-03": {
+    "cz": {
+      "name": "Radomír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Miloslav",
+      "holiday": ""
+    }
+  },
+  "07-04": {
+    "cz": {
+      "name": "Prokop",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Prokop",
+      "holiday": ""
+    }
+  },
+  "07-05": {
+    "cz": {
+      "name": "Cyril",
+      "holiday": "Den slovanských věrozvěstů Cyrila a Metoděje"
+    },
+    "sk": {
+      "name": "Cyril",
+      "holiday": "Sviatok svätého Cyrila a Metoda"
+    }
+  },
+  "07-06": {
+    "cz": {
+      "name": "Jan Hus",
+      "holiday": "Den upálení mistra Jana Husa"
+    },
+    "sk": {
+      "name": "Patrik, Patrícia",
+      "holiday": ""
+    }
+  },
+  "07-07": {
+    "cz": {
+      "name": "Bohuslava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Oliver",
+      "holiday": ""
+    }
+  },
+  "07-08": {
+    "cz": {
+      "name": "Nora",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ivan",
+      "holiday": ""
+    }
+  },
+  "07-09": {
+    "cz": {
+      "name": "Drahoslava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lujza",
+      "holiday": ""
+    }
+  },
+  "07-10": {
+    "cz": {
+      "name": "Libuše",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Amália",
+      "holiday": ""
+    }
+  },
+  "07-11": {
+    "cz": {
+      "name": "Olga",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Milota",
+      "holiday": ""
+    }
+  },
+  "07-12": {
+    "cz": {
+      "name": "Bořek",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Nina",
+      "holiday": ""
+    }
+  },
+  "07-13": {
+    "cz": {
+      "name": "Markéta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Margita",
+      "holiday": ""
+    }
+  },
+  "07-14": {
+    "cz": {
+      "name": "Karolína",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kamil",
+      "holiday": ""
+    }
+  },
+  "07-15": {
+    "cz": {
+      "name": "Jindřich",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Henrich",
+      "holiday": ""
+    }
+  },
+  "07-16": {
+    "cz": {
+      "name": "Luboš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Drahomír",
+      "holiday": ""
+    }
+  },
+  "07-17": {
+    "cz": {
+      "name": "Martina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohuslav",
+      "holiday": ""
+    }
+  },
+  "07-18": {
+    "cz": {
+      "name": "Drahomír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kamila",
+      "holiday": ""
+    }
+  },
+  "07-19": {
+    "cz": {
+      "name": "Čeněk",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dušana",
+      "holiday": ""
+    }
+  },
+  "07-20": {
+    "cz": {
+      "name": "Ilja",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Iľja, Eliáš",
+      "holiday": ""
+    }
+  },
+  "07-21": {
+    "cz": {
+      "name": "Vítězslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Daniel",
+      "holiday": ""
+    }
+  },
+  "07-22": {
+    "cz": {
+      "name": "Magdaléna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Magdaléna",
+      "holiday": ""
+    }
+  },
+  "07-23": {
+    "cz": {
+      "name": "Libor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Oľga",
+      "holiday": ""
+    }
+  },
+  "07-24": {
+    "cz": {
+      "name": "Kristýna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vladimír",
+      "holiday": ""
+    }
+  },
+  "07-25": {
+    "cz": {
+      "name": "Jakub",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jakub",
+      "holiday": ""
+    }
+  },
+  "07-26": {
+    "cz": {
+      "name": "Anna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Anna, Hana",
+      "holiday": ""
+    }
+  },
+  "07-27": {
+    "cz": {
+      "name": "Věroslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Božena",
+      "holiday": ""
+    }
+  },
+  "07-28": {
+    "cz": {
+      "name": "Viktor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Krištof",
+      "holiday": ""
+    }
+  },
+  "07-29": {
+    "cz": {
+      "name": "Marta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marta",
+      "holiday": ""
+    }
+  },
+  "07-30": {
+    "cz": {
+      "name": "Bořivoj",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Libuša",
+      "holiday": ""
+    }
+  },
+  "07-31": {
+    "cz": {
+      "name": "Ignác",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ignác",
+      "holiday": ""
+    }
+  },
+  "08-01": {
+    "cz": {
+      "name": "Oskar",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Božidara",
+      "holiday": ""
+    }
+  },
+  "08-02": {
+    "cz": {
+      "name": "Gustav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Gustáv",
+      "holiday": ""
+    }
+  },
+  "08-03": {
+    "cz": {
+      "name": "Miluše",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jerguš",
+      "holiday": ""
+    }
+  },
+  "08-04": {
+    "cz": {
+      "name": "Dominik",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dominik, Dominika",
+      "holiday": ""
+    }
+  },
+  "08-05": {
+    "cz": {
+      "name": "Kristián",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Hortenzia",
+      "holiday": ""
+    }
+  },
+  "08-06": {
+    "cz": {
+      "name": "Oldřiška",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jozefína",
+      "holiday": ""
+    }
+  },
+  "08-07": {
+    "cz": {
+      "name": "Lada",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Štefánia",
+      "holiday": ""
+    }
+  },
+  "08-08": {
+    "cz": {
+      "name": "Soběslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Oskar",
+      "holiday": ""
+    }
+  },
+  "08-09": {
+    "cz": {
+      "name": "Roman",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľubomíra",
+      "holiday": ""
+    }
+  },
+  "08-10": {
+    "cz": {
+      "name": "Vavřinec",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vavrinec",
+      "holiday": ""
+    }
+  },
+  "08-11": {
+    "cz": {
+      "name": "Zuzana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zuzana",
+      "holiday": ""
+    }
+  },
+  "08-12": {
+    "cz": {
+      "name": "Klára",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Darina",
+      "holiday": ""
+    }
+  },
+  "08-13": {
+    "cz": {
+      "name": "Alena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľubomír",
+      "holiday": ""
+    }
+  },
+  "08-14": {
+    "cz": {
+      "name": "Alan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Mojmír",
+      "holiday": ""
+    }
+  },
+  "08-15": {
+    "cz": {
+      "name": "Hana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marcela",
+      "holiday": ""
+    }
+  },
+  "08-16": {
+    "cz": {
+      "name": "Jáchym",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Leonard",
+      "holiday": ""
+    }
+  },
+  "08-17": {
+    "cz": {
+      "name": "Petra",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Milica",
+      "holiday": ""
+    }
+  },
+  "08-18": {
+    "cz": {
+      "name": "Helena",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Elena, Helena",
+      "holiday": ""
+    }
+  },
+  "08-19": {
+    "cz": {
+      "name": "Ludvík",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lýdia",
+      "holiday": ""
+    }
+  },
+  "08-20": {
+    "cz": {
+      "name": "Bernard",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Anabela",
+      "holiday": ""
+    }
+  },
+  "08-21": {
+    "cz": {
+      "name": "Johana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jana",
+      "holiday": ""
+    }
+  },
+  "08-22": {
+    "cz": {
+      "name": "Bohuslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Tichomír",
+      "holiday": ""
+    }
+  },
+  "08-23": {
+    "cz": {
+      "name": "Sandra",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Filip",
+      "holiday": ""
+    }
+  },
+  "08-24": {
+    "cz": {
+      "name": "Bartoloměj",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bartolomej",
+      "holiday": ""
+    }
+  },
+  "08-25": {
+    "cz": {
+      "name": "Radim",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľudovít",
+      "holiday": ""
+    }
+  },
+  "08-26": {
+    "cz": {
+      "name": "Luděk",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Samuel",
+      "holiday": ""
+    }
+  },
+  "08-27": {
+    "cz": {
+      "name": "Otakar",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Silvia",
+      "holiday": ""
+    }
+  },
+  "08-28": {
+    "cz": {
+      "name": "Augustýn",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Augustín",
+      "holiday": ""
+    }
+  },
+  "08-29": {
+    "cz": {
+      "name": "Evelína",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Nikola, Nikolaj",
+      "holiday": "Výročie Slovenského národného povstania"
+    }
+  },
+  "08-30": {
+    "cz": {
+      "name": "Vladěna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ružena",
+      "holiday": ""
+    }
+  },
+  "08-31": {
+    "cz": {
+      "name": "Pavlína",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Nora",
+      "holiday": ""
+    }
+  },
+  "09-01": {
+    "cz": {
+      "name": "Linda",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Drahoslava",
+      "holiday": "Deň Ústavy Slovenskej republiky"
+    }
+  },
+  "09-02": {
+    "cz": {
+      "name": "Adéla",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Linda",
+      "holiday": ""
+    }
+  },
+  "09-03": {
+    "cz": {
+      "name": "Bronislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Belo",
+      "holiday": ""
+    }
+  },
+  "09-04": {
+    "cz": {
+      "name": "Jindřiška",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Rozália",
+      "holiday": ""
+    }
+  },
+  "09-05": {
+    "cz": {
+      "name": "Boris",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Regína",
+      "holiday": ""
+    }
+  },
+  "09-06": {
+    "cz": {
+      "name": "Boleslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alica",
+      "holiday": ""
+    }
+  },
+  "09-07": {
+    "cz": {
+      "name": "Regína",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marianna",
+      "holiday": ""
+    }
+  },
+  "09-08": {
+    "cz": {
+      "name": "Mariana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Miriama",
+      "holiday": ""
+    }
+  },
+  "09-09": {
+    "cz": {
+      "name": "Daniela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Martina",
+      "holiday": ""
+    }
+  },
+  "09-10": {
+    "cz": {
+      "name": "Irma",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Oleg",
+      "holiday": ""
+    }
+  },
+  "09-11": {
+    "cz": {
+      "name": "Denisa",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bystrík",
+      "holiday": ""
+    }
+  },
+  "09-12": {
+    "cz": {
+      "name": "Marie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Mária",
+      "holiday": ""
+    }
+  },
+  "09-13": {
+    "cz": {
+      "name": "Lubor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ctibor",
+      "holiday": ""
+    }
+  },
+  "09-14": {
+    "cz": {
+      "name": "Radka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľudomil",
+      "holiday": ""
+    }
+  },
+  "09-15": {
+    "cz": {
+      "name": "Jolana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jolana",
+      "holiday": "Sedembolestná Panna Mária"
+    }
+  },
+  "09-16": {
+    "cz": {
+      "name": "Ludmila",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľudmila",
+      "holiday": ""
+    }
+  },
+  "09-17": {
+    "cz": {
+      "name": "Naděžda",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Olympia",
+      "holiday": ""
+    }
+  },
+  "09-18": {
+    "cz": {
+      "name": "Kryštof",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Eugénia",
+      "holiday": ""
+    }
+  },
+  "09-19": {
+    "cz": {
+      "name": "Zita",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Konštantín",
+      "holiday": ""
+    }
+  },
+  "09-20": {
+    "cz": {
+      "name": "Oleg",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľuboslav, Ľuboslava",
+      "holiday": ""
+    }
+  },
+  "09-21": {
+    "cz": {
+      "name": "Matouš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Matúš",
+      "holiday": ""
+    }
+  },
+  "09-22": {
+    "cz": {
+      "name": "Darina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Móric",
+      "holiday": ""
+    }
+  },
+  "09-23": {
+    "cz": {
+      "name": "Berta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Zdenka",
+      "holiday": ""
+    }
+  },
+  "09-24": {
+    "cz": {
+      "name": "Jaromír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ľuboš, Ľubor",
+      "holiday": ""
+    }
+  },
+  "09-25": {
+    "cz": {
+      "name": "Zlata",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vladislav",
+      "holiday": ""
+    }
+  },
+  "09-26": {
+    "cz": {
+      "name": "Andrea",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Edita",
+      "holiday": ""
+    }
+  },
+  "09-27": {
+    "cz": {
+      "name": "Jonáš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Cyprián",
+      "holiday": ""
+    }
+  },
+  "09-28": {
+    "cz": {
+      "name": "Václav",
+      "holiday": "Den české státnosti"
+    },
+    "sk": {
+      "name": "Václav",
+      "holiday": ""
+    }
+  },
+  "09-29": {
+    "cz": {
+      "name": "Michal",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Michal, Michaela",
+      "holiday": ""
+    }
+  },
+  "09-30": {
+    "cz": {
+      "name": "Jeroným",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Jarolím",
+      "holiday": ""
+    }
+  },
+  "10-01": {
+    "cz": {
+      "name": "Igor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Arnold",
+      "holiday": ""
+    }
+  },
+  "10-02": {
+    "cz": {
+      "name": "Olivie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Levoslav",
+      "holiday": ""
+    }
+  },
+  "10-03": {
+    "cz": {
+      "name": "Bohumil",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Stela",
+      "holiday": ""
+    }
+  },
+  "10-04": {
+    "cz": {
+      "name": "František",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "František",
+      "holiday": ""
+    }
+  },
+  "10-05": {
+    "cz": {
+      "name": "Eliška",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Viera",
+      "holiday": ""
+    }
+  },
+  "10-06": {
+    "cz": {
+      "name": "Hanuš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Natália",
+      "holiday": ""
+    }
+  },
+  "10-07": {
+    "cz": {
+      "name": "Justýna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Eliška",
+      "holiday": ""
+    }
+  },
+  "10-08": {
+    "cz": {
+      "name": "Věra",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Brigita",
+      "holiday": ""
+    }
+  },
+  "10-09": {
+    "cz": {
+      "name": "Štefan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dionýz",
+      "holiday": ""
+    }
+  },
+  "10-10": {
+    "cz": {
+      "name": "Marina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Slavomíra",
+      "holiday": ""
+    }
+  },
+  "10-11": {
+    "cz": {
+      "name": "Andrej",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Valentína",
+      "holiday": ""
+    }
+  },
+  "10-12": {
+    "cz": {
+      "name": "Marcel",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Maximilián",
+      "holiday": ""
+    }
+  },
+  "10-13": {
+    "cz": {
+      "name": "Renáta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Koloman",
+      "holiday": ""
+    }
+  },
+  "10-14": {
+    "cz": {
+      "name": "Agáta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Boris",
+      "holiday": ""
+    }
+  },
+  "10-15": {
+    "cz": {
+      "name": "Tereza",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Terézia",
+      "holiday": ""
+    }
+  },
+  "10-16": {
+    "cz": {
+      "name": "Havel",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vladimíra",
+      "holiday": ""
+    }
+  },
+  "10-17": {
+    "cz": {
+      "name": "Hedvika",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Hedviga",
+      "holiday": ""
+    }
+  },
+  "10-18": {
+    "cz": {
+      "name": "Lukáš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lukáš",
+      "holiday": ""
+    }
+  },
+  "10-19": {
+    "cz": {
+      "name": "Michaela",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kristián",
+      "holiday": ""
+    }
+  },
+  "10-20": {
+    "cz": {
+      "name": "Vendelín",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vendelín",
+      "holiday": ""
+    }
+  },
+  "10-21": {
+    "cz": {
+      "name": "Brigita",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Uršuľa",
+      "holiday": ""
+    }
+  },
+  "10-22": {
+    "cz": {
+      "name": "Sabina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Sergej",
+      "holiday": ""
+    }
+  },
+  "10-23": {
+    "cz": {
+      "name": "Teodor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alojzia",
+      "holiday": ""
+    }
+  },
+  "10-24": {
+    "cz": {
+      "name": "Nina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kvetoslava",
+      "holiday": ""
+    }
+  },
+  "10-25": {
+    "cz": {
+      "name": "Beáta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Aurel",
+      "holiday": ""
+    }
+  },
+  "10-26": {
+    "cz": {
+      "name": "Erik",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Demeter",
+      "holiday": ""
+    }
+  },
+  "10-27": {
+    "cz": {
+      "name": "Šarlota",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Sabína",
+      "holiday": ""
+    }
+  },
+  "10-28": {
+    "cz": {
+      "name": "Státní svátek",
+      "holiday": "Den vzniku samostatného československého státu"
+    },
+    "sk": {
+      "name": "Dobromila",
+      "holiday": ""
+    }
+  },
+  "10-29": {
+    "cz": {
+      "name": "Silvie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Klára",
+      "holiday": ""
+    }
+  },
+  "10-30": {
+    "cz": {
+      "name": "Tadeáš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Šimon, Simona",
+      "holiday": ""
+    }
+  },
+  "10-31": {
+    "cz": {
+      "name": "Štěpánka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Aurélia",
+      "holiday": ""
+    }
+  },
+  "11-01": {
+    "cz": {
+      "name": "Felix",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Denis, Denisa",
+      "holiday": "Sviatok Všetkých svätých"
+    }
+  },
+  "11-02": {
+    "cz": {
+      "name": "Tobiáš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Pamiatka zosnulých",
+      "holiday": ""
+    }
+  },
+  "11-03": {
+    "cz": {
+      "name": "Hubert",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Hubert",
+      "holiday": ""
+    }
+  },
+  "11-04": {
+    "cz": {
+      "name": "Karel",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Karol",
+      "holiday": ""
+    }
+  },
+  "11-05": {
+    "cz": {
+      "name": "Miriam",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Imrich",
+      "holiday": ""
+    }
+  },
+  "11-06": {
+    "cz": {
+      "name": "Liběna",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Renáta",
+      "holiday": ""
+    }
+  },
+  "11-07": {
+    "cz": {
+      "name": "Saskie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "René",
+      "holiday": ""
+    }
+  },
+  "11-08": {
+    "cz": {
+      "name": "Bohumír",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohumír",
+      "holiday": ""
+    }
+  },
+  "11-09": {
+    "cz": {
+      "name": "Bohdan",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Teodor",
+      "holiday": ""
+    }
+  },
+  "11-10": {
+    "cz": {
+      "name": "Evžen",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Tibor",
+      "holiday": ""
+    }
+  },
+  "11-11": {
+    "cz": {
+      "name": "Martin",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Martin, Maroš",
+      "holiday": ""
+    }
+  },
+  "11-12": {
+    "cz": {
+      "name": "Benedikt",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Svätopluk",
+      "holiday": ""
+    }
+  },
+  "11-13": {
+    "cz": {
+      "name": "Tibor",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Stanislav",
+      "holiday": ""
+    }
+  },
+  "11-14": {
+    "cz": {
+      "name": "Sáva",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Irma",
+      "holiday": ""
+    }
+  },
+  "11-15": {
+    "cz": {
+      "name": "Leopold",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Leopold",
+      "holiday": ""
+    }
+  },
+  "11-16": {
+    "cz": {
+      "name": "Otmar",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Agnesa",
+      "holiday": ""
+    }
+  },
+  "11-17": {
+    "cz": {
+      "name": "Mahulena",
+      "holiday": "Den boje za svobodu a demokracii"
+    },
+    "sk": {
+      "name": "Klaudia",
+      "holiday": "Deň boja za slobodu a demokraciu"
+    }
+  },
+  "11-18": {
+    "cz": {
+      "name": "Romana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Eugen",
+      "holiday": ""
+    }
+  },
+  "11-19": {
+    "cz": {
+      "name": "Alžběta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Alžbeta",
+      "holiday": ""
+    }
+  },
+  "11-20": {
+    "cz": {
+      "name": "Nikola",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Félix",
+      "holiday": ""
+    }
+  },
+  "11-21": {
+    "cz": {
+      "name": "Albert",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Elvíra",
+      "holiday": ""
+    }
+  },
+  "11-22": {
+    "cz": {
+      "name": "Cecílie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Cecília",
+      "holiday": ""
+    }
+  },
+  "11-23": {
+    "cz": {
+      "name": "Klement",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Klement",
+      "holiday": ""
+    }
+  },
+  "11-24": {
+    "cz": {
+      "name": "Emílie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Emília",
+      "holiday": ""
+    }
+  },
+  "11-25": {
+    "cz": {
+      "name": "Kateřina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Katarína",
+      "holiday": ""
+    }
+  },
+  "11-26": {
+    "cz": {
+      "name": "Artur",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kornel",
+      "holiday": ""
+    }
+  },
+  "11-27": {
+    "cz": {
+      "name": "Xenie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Milan",
+      "holiday": ""
+    }
+  },
+  "11-28": {
+    "cz": {
+      "name": "René",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Henrieta",
+      "holiday": ""
+    }
+  },
+  "11-29": {
+    "cz": {
+      "name": "Zina",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Vratko",
+      "holiday": ""
+    }
+  },
+  "11-30": {
+    "cz": {
+      "name": "Ondřej",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ondrej, Andrej",
+      "holiday": ""
+    }
+  },
+  "12-01": {
+    "cz": {
+      "name": "Iva",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Edmund",
+      "holiday": ""
+    }
+  },
+  "12-02": {
+    "cz": {
+      "name": "Blanka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bibiána",
+      "holiday": ""
+    }
+  },
+  "12-03": {
+    "cz": {
+      "name": "Svatoslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Oldrich",
+      "holiday": ""
+    }
+  },
+  "12-04": {
+    "cz": {
+      "name": "Barbora",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Barbora",
+      "holiday": ""
+    }
+  },
+  "12-05": {
+    "cz": {
+      "name": "Jitka",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Oto",
+      "holiday": ""
+    }
+  },
+  "12-06": {
+    "cz": {
+      "name": "Mikuláš",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Mikuláš",
+      "holiday": ""
+    }
+  },
+  "12-07": {
+    "cz": {
+      "name": "Benjamín",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ambróz",
+      "holiday": ""
+    }
+  },
+  "12-08": {
+    "cz": {
+      "name": "Květoslava",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Marína",
+      "holiday": ""
+    }
+  },
+  "12-09": {
+    "cz": {
+      "name": "Vratislav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Izabela",
+      "holiday": ""
+    }
+  },
+  "12-10": {
+    "cz": {
+      "name": "Julie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Radúz",
+      "holiday": ""
+    }
+  },
+  "12-11": {
+    "cz": {
+      "name": "Dana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Hilda",
+      "holiday": ""
+    }
+  },
+  "12-12": {
+    "cz": {
+      "name": "Simona",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Otília",
+      "holiday": ""
+    }
+  },
+  "12-13": {
+    "cz": {
+      "name": "Lucie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Lucia",
+      "holiday": ""
+    }
+  },
+  "12-14": {
+    "cz": {
+      "name": "Lýdie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Branislava, Bronislava",
+      "holiday": ""
+    }
+  },
+  "12-15": {
+    "cz": {
+      "name": "Radana",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ivica",
+      "holiday": ""
+    }
+  },
+  "12-16": {
+    "cz": {
+      "name": "Albína",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Albína",
+      "holiday": ""
+    }
+  },
+  "12-17": {
+    "cz": {
+      "name": "Daniel",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Kornélia",
+      "holiday": ""
+    }
+  },
+  "12-18": {
+    "cz": {
+      "name": "Miloslav",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Sláva, Slávka",
+      "holiday": ""
+    }
+  },
+  "12-19": {
+    "cz": {
+      "name": "Ester",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Judita",
+      "holiday": ""
+    }
+  },
+  "12-20": {
+    "cz": {
+      "name": "Dagmar",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dagmara",
+      "holiday": ""
+    }
+  },
+  "12-21": {
+    "cz": {
+      "name": "Natálie",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Bohdan",
+      "holiday": ""
+    }
+  },
+  "12-22": {
+    "cz": {
+      "name": "Šimon",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Adela",
+      "holiday": ""
+    }
+  },
+  "12-23": {
+    "cz": {
+      "name": "Vlasta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Nadežda",
+      "holiday": ""
+    }
+  },
+  "12-24": {
+    "cz": {
+      "name": "Adam, Eva",
+      "holiday": "Štědrý den"
+    },
+    "sk": {
+      "name": "Adam, Eva",
+      "holiday": "Štedrý deň"
+    }
+  },
+  "12-25": {
+    "cz": {
+      "name": "Boží hod vánoční",
+      "holiday": "1. svátek vánoční"
+    },
+    "sk": {
+      "name": "Vianoce",
+      "holiday": "1. sviatok vianočný"
+    }
+  },
+  "12-26": {
+    "cz": {
+      "name": "Štěpán",
+      "holiday": "2. svátek vánoční"
+    },
+    "sk": {
+      "name": "Štefan",
+      "holiday": "2. sviatok vianočný"
+    }
+  },
+  "12-27": {
+    "cz": {
+      "name": "Žaneta",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Filoména",
+      "holiday": ""
+    }
+  },
+  "12-28": {
+    "cz": {
+      "name": "Bohumila",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Ivana, Ivona",
+      "holiday": ""
+    }
+  },
+  "12-29": {
+    "cz": {
+      "name": "Judita",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Milada",
+      "holiday": ""
+    }
+  },
+  "12-30": {
+    "cz": {
+      "name": "David",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Dávid",
+      "holiday": ""
+    }
+  },
+  "12-31": {
+    "cz": {
+      "name": "Silvestr",
+      "holiday": ""
+    },
+    "sk": {
+      "name": "Silvester",
+      "holiday": ""
+    }
+  }
+}
