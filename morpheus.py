@@ -1,11 +1,9 @@
 import logging
-import os
 import platform
 
 import aiohttp
 import discord
 import git
-import wavelink
 from discord.ext import commands
 
 from config.app_config import config
@@ -29,10 +27,10 @@ class Morpheus(commands.Bot):
         logging.info("Database initialized")
 
         # connect to lavalink
-        port = os.environ.get("SERVER_PORT", 2333)
-        password = os.environ.get("LAVALINK_SERVER_PASSWORD", "youshallnotpass")
-        nodes = [wavelink.Node(uri=f"ws://lavalink:{port}", password=password)]
-        await wavelink.Pool.connect(nodes=nodes, client=self, cache_capacity=None)
+        # port = os.environ.get("SERVER_PORT", 2333)
+        # password = os.environ.get("LAVALINK_SERVER_PASSWORD", "youshallnotpass")
+        # nodes = [wavelink.Node(uri=f"ws://lavalink:{port}", password=password)]
+        # await wavelink.Pool.connect(nodes=nodes, client=self, cache_capacity=None)
 
         # get bot data
         await self.application_info()

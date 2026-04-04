@@ -40,38 +40,38 @@ services:
                 - morpheus-bot
         environment:
             TZ: "Europe/Prague"
-        env_file:
-            - ./config/lavalink_secrets.env
+        # env_file:
+        #     - ./config/lavalink_secrets.env
         volumes:
             - .:/morpheus:Z
         depends_on:
             postgres:
                 condition: service_healthy
-            lavalink:
-                condition: service_started
+            # lavalink:
+            #     condition: service_started
         networks:
-            - lavalink
             - morpheus
             - nasa_api
+            # - lavalink
 
-    lavalink:
-        image: ghcr.io/lavalink-devs/lavalink:4
-        container_name: lavalink
-        volumes:
-            - ./config/application.yml:/opt/Lavalink/application.yml
-            # use chown on folder to fix permissions "chown 322:322 plugins/"
-            - ./plugins/:/opt/Lavalink/plugins/
-        env_file:
-            - ./config/lavalink_secrets.env
-        networks:
-            - lavalink
-        expose:
-            - "2333"
-        deploy:
-            restart_policy:
-                condition: unless-stopped
-                delay: 5s
-                window: 20s
+    # lavalink:
+    #     image: ghcr.io/lavalink-devs/lavalink:4
+    #     container_name: lavalink
+    #     volumes:
+    #         - ./config/application.yml:/opt/Lavalink/application.yml
+    #         # use chown on folder to fix permissions "chown 322:322 plugins/"
+    #         - ./plugins/:/opt/Lavalink/plugins/
+    #     env_file:
+    #         - ./config/lavalink_secrets.env
+    #     networks:
+    #         - lavalink
+    #     expose:
+    #         - "2333"
+    #     deploy:
+    #         restart_policy:
+    #             condition: unless-stopped
+    #             delay: 5s
+    #             window: 20s
 
     nasa-api:
         image: ghcr.io/solumath/apod-api:latest
@@ -86,7 +86,7 @@ services:
 
 networks:
     morpheus:
-    lavalink:
+    # lavalink:
     nasa_api:
 
 volumes:
