@@ -44,7 +44,8 @@ class PartialEmojiTransformer(discord.PartialEmoji):
             match = re.search(r"/emojis/(\d+)", emoji)
             if match:
                 emoji_id = int(match.group(1))
-                return discord.PartialEmoji(name="emoji", id=emoji_id)
+                animated = "animated=true" in emoji.lower()
+                return discord.PartialEmoji(name="emoji", id=emoji_id, animated=animated)
             raise commands.BadArgument()
 
 
