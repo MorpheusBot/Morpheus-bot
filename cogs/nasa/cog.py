@@ -14,6 +14,7 @@ from discord.ext import commands, tasks
 from cogs.base import Base
 from custom import room_check
 from custom.cooldowns import default_cooldown
+from custom.custom_errors import ApiError
 from utils.general import get_local_zone
 
 from .features import create_nasa_embed, filename, get_nasa_image, nasa_daily_image
@@ -46,8 +47,12 @@ class Nasa(Base, commands.Cog):
 
     @tasks.loop(time=time(7, 0, tzinfo=get_local_zone()))
     async def send_nasa_image(self):
-        response = await nasa_daily_image(self.bot.morpheus_session)
-        await get_nasa_image(self.bot.morpheus_session, response)
+        try:
+            response = await nasa_daily_image(self.bot.morpheus_session)
+            await get_nasa_image(self.bot.morpheus_session, response)
+        except ApiError as e:
+            await self.bot_dev_channel.send(str(e))
+            return
         embed, attachment = await create_nasa_embed(self.bot.user, response)
         for channel in self.nasa_channels:
             if attachment:
