@@ -52,7 +52,8 @@ class GuildDB(Base):
     @classmethod
     async def get_info_channel(cls, guild_id: str) -> str | None:
         async with database.get_session() as session:
-            guild = await session.execute(select(cls).where(cls.id == guild_id)).scalar_one_or_none()
+            result = await session.execute(select(cls).where(cls.id == guild_id))
+            guild = result.scalar_one_or_none()
             if guild:
                 info_channel = guild.info_channel_id if guild.info_channel_id else None
                 return info_channel
