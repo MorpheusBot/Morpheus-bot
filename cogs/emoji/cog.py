@@ -84,7 +84,7 @@ class Emoji(Base, commands.Cog):
         await inter.response.defer()
         if not os.path.exists("emojis.zip"):
             await self.download_emojis(inter.guild)
-        await inter.edit_original_response(file=discord.File("emojis.zip"))
+        await inter.edit_original_response(attachments=[discord.File("emojis.zip")])
 
     @emoji.command(name="get_sticker", description=EmojiMess.get_sticker_brief)
     async def get_sticker(
