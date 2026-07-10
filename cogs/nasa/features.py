@@ -20,8 +20,8 @@ async def nasa_daily_image(morpheus_session: aiohttp.ClientSession) -> dict:
     try:
         async with morpheus_session.get(url) as resp:
             response = await resp.json()
-            if "error" in response:
-                raise ApiError(response["error"])
+            if resp.status != 200:
+                raise ApiError(response.get("detail", response.get("error", "Unknown nasa-api error")))
             return response
     except (aiohttp.ClientConnectorError, asyncio.exceptions.TimeoutError) as error:
         raise ApiError(str(error))
